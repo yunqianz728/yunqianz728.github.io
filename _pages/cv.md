@@ -12,7 +12,7 @@ redirect_from:
 Education
 ======
 * Chengdu No.9 High School, 2022 
-* B.S. in GitHub, GitHub University, 2026 (Expected)
+* B.E. in Beijing Normal University, 2026 (Expected)
 
 Volunteer experience
 ======
