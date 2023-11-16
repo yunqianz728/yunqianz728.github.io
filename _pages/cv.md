@@ -11,12 +11,12 @@ redirect_from:
 
 Education
 ======
-* High School in Chengdu No.9 High School, 2022 
+* Chengdu No.9 High School, 2022 
 * B.S. in GitHub, GitHub University, 2026 (Expected)
 
 Volunteer experience
 ======
-* Summer 2023: Vice-team Leader
+* Summer 2023: Vice Team Leader
   * Organized a team of 10 students from BNU to Yunnan
   * Helped local farmers improve efficiency of algriculture practices as well as life quality.
   * First prize in school's summer volunteer programs.
