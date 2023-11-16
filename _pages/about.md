@@ -8,4 +8,5 @@ redirect_from:
   - /about.html
 ---
 
-Hello and welcome to my homepage! I am a second-year undergraduate student in School of Environment at Beijing Normal University. My track is now on environmental science. I am interested in the interdiscipline of climate policy and economics, as well as environmental chemistry. Starting in 2023 summer, I've been doing research on CO2 emission in development of digital economics, supervised by Prof. Xin Tian at BNU. I am also pleasured to be advised by Prof. Ke Sun at BNU to do research related to soil contamination.
+Hello, and welcome to my homepage! I am a second-year undergraduate student at the School of Environment, Beijing Normal University, majoring in Environmental Science. My academic interests lie at the intersection of climate policy, economics, and environmental chemistry. Since the summer of 2023, I have been conducting research on CO2 emissions in the development of the digital economy, under the supervision of Prof. Xin Tian at Beijing Normal University. Additionally, I am honored to receive guidance from Prof. Ke Sun at BNU for my research on soil contamination.
+
