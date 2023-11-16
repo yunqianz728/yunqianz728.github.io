@@ -11,7 +11,7 @@ redirect_from:
 
 Education
 ======
-* High School in Chengdu No.7 High School 
+* High School in Chengdu No.9 High School, 2022 
 * B.S. in GitHub, GitHub University, 2026 (Expected)
 
 Volunteer experience
