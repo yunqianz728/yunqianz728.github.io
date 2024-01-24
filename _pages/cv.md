@@ -17,11 +17,11 @@ Education
 Volunteer experience
 ======
 * Summer 2023: Vice Team Leader
-  * Organized a team of 10 students from BNU to Yunnan
-  * Helped local farmers improve efficiency of algriculture practices as well as life quality.
-  * First prize in school's summer volunteer programs.
+  * Organized a team of 10 students from BNU to Dali, Yunnan
+  * Cooperate with local farmers to develop green, low carbon emmision agriculture.
+  * Received  ``Innovative Research Award'' for low-carbon environmental protection topic in a college students' public welfare project of social investigation
 
 
 Skills
 ======
-* Python, Matlab, R, Excel
+* Python, Matlab, R, Excel, Latex
