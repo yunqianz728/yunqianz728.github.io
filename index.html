@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yunqian Zhang - Environmental Science Researcher at Beijing Normal University, UC Berkeley, and MIT">
+    <meta name="keywords" content="Yunqian Zhang, Environmental Science, Research, Beijing Normal University, UC Berkeley, MIT">
+    <title>Yunqian Zhang - Environmental Science Researcher</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #27ae60;
+            --accent-color: #3498db;
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+            --white: #ffffff;
+            --shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--white);
+            box-shadow: var(--shadow);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0 1.5rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Header/Hero Section */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: var(--white);
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path fill="%23ffffff20" d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path></svg>') no-repeat bottom;
+            background-size: cover;
+            opacity: 0.3;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            position: relative;
+            animation: fadeInDown 1s ease;
+        }
+
+        header p {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+            animation: fadeInUp 1s ease 0.3s backwards;
+        }
+
+        .contact-info {
+            margin-top: 1.5rem;
+            position: relative;
+            animation: fadeInUp 1s ease 0.6s backwards;
+        }
+
+        .contact-info a {
+            color: var(--white);
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: opacity 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            opacity: 0.8;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            animation: fadeIn 1s ease;
+        }
+
+        section h2 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+
+        /* Education Cards */
+        .education-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .education-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .education-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        .education-card h3 {
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .education-card .date {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Research Projects */
+        .research-container {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .research-item {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--secondary-color);
+            transition: all 0.3s ease;
+        }
+
+        .research-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        .research-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .research-item .institution {
+            color: var(--accent-color);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .research-item .date {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .research-item ul {
+            list-style-position: inside;
+            margin-left: 1rem;
+        }
+
+        .research-item ul li {
+            margin-bottom: 0.5rem;
+            line-height: 1.8;
+        }
+
+        /* Skills Section */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .skill-category {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-category h3 {
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .skill-category p {
+            line-height: 1.8;
+        }
+
+        /* Awards Section */
+        .awards-list {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        .awards-list ul {
+            list-style: none;
+        }
+
+        .awards-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .awards-list li:last-child {
+            border-bottom: none;
+        }
+
+        .awards-list li::before {
+            content: '🏆';
+            position: absolute;
+            left: 0;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            header p {
+                font-size: 1.1rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+            
+            section {
+                padding: 3rem 1rem;
+            }
+            
+            section h2 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Add some visual interest with subtle patterns */
+        .pattern-bg {
+            background-color: #ffffff;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-opacity='0.03'%3E%3Cpolygon fill='%23000' points='50 0 60 40 100 50 60 60 50 100 40 60 0 50 40 40'/%3E%3C/g%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#awards">Awards</a></li>
+            <li><a href="#volunteer">Volunteer</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header/Hero Section -->
+    <header id="home">
+        <h1>Yunqian Zhang</h1>
+        <p>Environmental Science Researcher</p>
+        <p>Beijing Normal University | UC Berkeley | MIT</p>
+        <div class="contact-info">
+            <a href="mailto:yunqianz@mail.bnu.edu.cn">📧 yunqianz@mail.bnu.edu.cn</a>
+            <a href="tel:+18577069238">📱 (857) 706-9238</a>
+        </div>
+    </header>
+
+    <!-- Education Section -->
+    <section id="education" class="pattern-bg">
+        <h2>Education</h2>
+        <div class="education-container">
+            <div class="education-card">
+                <h3>Beijing Normal University</h3>
+                <p class="date">09/2022 - 07/2026 (Expected)</p>
+                <p><strong>Bachelor of Science in Environmental Science</strong></p>
+                <p>School of Environment, Beijing, China</p>
+                <p>• GPA: 3.87/4.00 (Rank: 1/29)</p>
+                <p>• TOEFL: 108</p>
+            </div>
+            
+            <div class="education-card">
+                <h3>University of California, Berkeley</h3>
+                <p class="date">09/2024 - 05/2025</p>
+                <p><strong>Exchange Student</strong></p>
+                <p>Berkeley Global Access Program</p>
+                <p>• GPA: 4.0/4.0</p>
+            </div>
+            
+            <div class="education-card">
+                <h3>Massachusetts Institute of Technology</h3>
+                <p class="date">06/2024 - 08/2024</p>
+                <p><strong>Visiting Student</strong></p>
+                <p>Department of Earth, Atmospheric, and Planetary Sciences (EAPS)</p>
+                <p>Summer research in Prof. Edward A. Boyle's group</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research">
+        <h2>Research Projects</h2>
+        <div class="research-container">
+            <div class="research-item">
+                <h3>Determination of vertical distribution and isotopic ratio of trace element Cr in the Pacific Ocean</h3>
+                <p class="institution">Prof. Edward A Boyle's Group, MIT EAPS</p>
+                <p class="date">06/2024 - Present</p>
+                <ul>
+                    <li>Conducted experiments to obtain data, including seawater samples acidification and equilibration</li>
+                    <li>Cr precipitation/dissolution with Mg(OH)₂, ion exchange purification, sulfur removal</li>
+                    <li>Sample preparation for MC-ICP-MS analysis</li>
+                </ul>
+            </div>
+
+            <div class="research-item">
+                <h3>Remote Sensing Land Classification & Methane Emission Reduction in Rice Cultivation</h3>
+                <p class="institution">Prof. Charles Taylor's Group, Harvard Kennedy School</p>
+                <p class="date">12/2024 - Present</p>
+                <ul>
+                    <li>Generated month-to-month LSWI, NDVI, Land-use and other indexes from GEE's remote sensing data</li>
+                    <li>Combined with phenology data to classify China's land into non-cropped, dry-rice-cultivation, and wet-rice-cultivation land (2008-2022)</li>
+                    <li>Analyzed the reducing effect of dry-rice-cultivation on methane emission data</li>
+                </ul>
+            </div>
+
+            <div class="research-item">
+                <h3>LiDAR-Augmented Zero-Shot Tree Crown Segmentation Using SAM 2</h3>
+                <p class="institution">Prof. Lu Liang's Group, UC Berkeley CED</p>
+                <p class="date">08/2024 - 02/2025</p>
+                <ul>
+                    <li>Enhanced tree crown delineation using SAM 2 with RGB and LiDAR data fusion</li>
+                    <li>Combined bounding boxes and LiDAR point prompts with noise reduction via sampling</li>
+                    <li>Demonstrated SAM 2's potential for efficient ITC segmentation in complex forests</li>
+                    <li>Paper currently in preparation</li>
+                </ul>
+            </div>
+
+            <div class="research-item">
+                <h3>Local Climate Zone (LCZ) and Urban Morphology Analysis of U.S. Cities</h3>
+                <p class="institution">UC Berkeley</p>
+                <p class="date">08/2024 - Present</p>
+                <ul>
+                    <li>Developed ML model to generate LCZ distribution maps using LiDAR and satellite imagery</li>
+                    <li>Engineered automated pipeline to process 50,000+ Google Street View images across 20+ cities</li>
+                    <li>Implemented computer vision techniques to quantify urban canyon characteristics</li>
+                    <li>Integrated multi-source climate data to analyze correlation with LCZ classifications</li>
+                </ul>
+            </div>
+
+            <div class="research-item">
+                <h3>Spatio-Temporal Optimization Modeling for National Photovoltaic Infrastructure Deployment</h3>
+                <p class="institution">Prof. Xin Tian's Group, Beijing Normal University</p>
+                <p class="date">06/2025 - Present</p>
+                <ul>
+                    <li>Developed multi-period dynamic optimization model for PV deployment across China</li>
+                    <li>Integrated diverse datasets (GIS, meteorological, economic) for comprehensive cost analysis</li>
+                    <li>Utilized Python for spatio-temporal data analysis and site suitability assessment</li>
+                    <li>Employed CatBoost ML models for robust data imputation and forecasting</li>
+                </ul>
+            </div>
+
+            <div class="research-item">
+                <h3>Published Research Papers</h3>
+                <p class="institution">Various Collaborations</p>
+                <p class="date">2023 - 2025</p>
+                <ul>
+                    <li><strong>Spatial distribution of bisphenol analogues in soil from Chengdu, China</strong> - Published in Environment Pollution (DOI: 10.1016/j.envpol.2024.124064)</li>
+                    <li><strong>Polyethylene microplastics hamper aged biochar's potential</strong> - Published in Carbon Research (DOI: 10.1007/s44246-024-00170-9)</li>
+                    <li><strong>Ecological surprises and bioremediation potential</strong> - Submitted to Earth-Science Reviews</li>
+                    <li><strong>Coupling index of heavy metal immobilization</strong> - Submitted for publication</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="pattern-bg">
+        <h2>Skills & Languages</h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>Programming Languages</h3>
+                <p>Python, C/C++, Java</p>
+            </div>
+            
+            <div class="skill-category">
+                <h3>Data Analysis & Visualization</h3>
+                <p>R, MATLAB, Excel, ArcGIS (Pro), QGIS, Google Earth Engine (GEE)</p>
+            </div>
+            
+            <div class="skill-category">
+                <h3>Languages</h3>
+                <p>Chinese (Fluent), English (TOEFL 108)</p>
+            </div>
+            
+            <div class="skill-category">
+                <h3>Arts & Music</h3>
+                <p>Flute (Orchestra performer), Singing (Award winner)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section id="awards">
+        <h2>Awards & Honors</h2>
+        <div class="awards-list">
+            <ul>
+                <li>First Prize Scholarship of Beijing Normal University (1/29)</li>
+                <li>First Prize of Undergraduate Incentive Scholarship</li>
+                <li>Three Good Student Scholarship</li>
+                <li>Second Prize Competition Scholarship of Beijing Normal University</li>
+                <li>Third Prize in Physics Competition for College Students in Some Regions of China</li>
+                <li>Second Prize in National College Student Municipal Environmental Innovation Practice Competition (Vice Team Leader)</li>
+                <li>Best Instrumental Performance - "West Side Story" at 2022 Beijing University Music Festival</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Volunteer Section -->
+    <section id="volunteer" class="pattern-bg">
+        <h2>Volunteer Experience & Talks</h2>
+        <div class="research-container">
+            <div class="research-item">
+                <h3>Research Team Leader - Dali, Yunnan</h3>
+                <p class="date">Summer 2023</p>
+                <ul>
+                    <li>Organized a team of 12 students from BNU to Dali, Yunnan</li>
+                    <li>Completed research report on local cultivation, recycling technology and culture</li>
+                    <li>Won "Innovation Research Report" award in 2023 Inspiration Plan College Student Social Research</li>
+                </ul>
+            </div>
+            
+            <div class="research-item">
+                <h3>Educational Talk Assistant - Hong Kong</h3>
+                <p class="date">November 2023</p>
+                <ul>
+                    <li>Assisted Prof. Xin Tian in delivering educational talks on environmental topics</li>
+                    <li>Topics included greenhouse effect, natural disasters, extreme weather, and emission reduction</li>
+                    <li>Presented at local elementary school</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Yunqian Zhang. All rights reserved.</p>
+        <p>Environmental Science Researcher | Beijing Normal University</p>
+    </footer>
+
+    <script>
+        // Smooth scroll behavior for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
+                nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            } else {
+                nav.style.backgroundColor = '#ffffff';
+                nav.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+            }
+        });
+
+        // Add fade-in animation to elements as they come into view
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all research items and skill categories
+        document.querySelectorAll('.research-item, .skill-category, .education-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
