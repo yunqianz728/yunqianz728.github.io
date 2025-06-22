@@ -104,6 +104,8 @@
             box-shadow: 0 8px 30px rgba(0,0,0,0.3);
             animation: fadeInDown 0.8s ease;
             transition: transform 0.3s ease;
+            cursor: pointer;
+            position: relative;
         }
 
         .profile-photo:hover {
@@ -114,11 +116,55 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, opacity 0.3s ease;
         }
 
         .profile-photo:hover img {
             transform: scale(1.1);
+        }
+
+        /* Photo indicator dots */
+        .photo-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: -1rem;
+            margin-bottom: 2rem;
+        }
+
+        .indicator-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            transition: background 0.3s ease;
+            cursor: pointer;
+        }
+
+        .indicator-dot.active {
+            background: rgba(255, 255, 255, 1);
+            width: 10px;
+            height: 10px;
+        }
+
+        .profile-photo::after {
+            content: '点击切换照片';
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .profile-photo:hover::after {
+            opacity: 1;
         }
 
         header h1 {
@@ -479,8 +525,13 @@
 
     <!-- Header/Hero Section -->
     <header id="home">
-        <div class="profile-photo">
-            <img src="profile-tower.jpg" alt="Yunqian Zhang">
+        <div class="profile-photo" onclick="switchPhoto()">
+            <img id="profileImage" src="profile-tower.jpg" alt="Yunqian Zhang">
+        </div>
+        <div class="photo-indicators">
+            <span class="indicator-dot" onclick="showPhoto(0)"></span>
+            <span class="indicator-dot" onclick="showPhoto(1)"></span>
+            <span class="indicator-dot active" onclick="showPhoto(2)"></span>
         </div>
         <h1>Yunqian Zhang</h1>
         <p>Environmental Science Researcher</p>
@@ -490,31 +541,6 @@
             <a href="tel:+18577069238">📱 (857) 706-9238</a>
         </div>
     </header>
-
-    <!-- About Section with Photo Gallery -->
-    <section id="about" class="pattern-bg">
-        <h2>About Me</h2>
-        <div class="about-container">
-            <div class="about-content">
-                <p>I am a passionate environmental science researcher currently pursuing my Bachelor's degree at Beijing Normal University, with exchange experiences at UC Berkeley and MIT. My research focuses on climate change, remote sensing, and environmental engineering, with a particular interest in sustainable solutions for global environmental challenges.</p>
-                
-                <div class="photo-gallery">
-                    <div class="gallery-item">
-                        <img src="profile-graduation.jpg" alt="UC Berkeley Graduation">
-                        <p>UC Berkeley Exchange Program</p>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="profile-building.jpg" alt="Berkeley Campus">
-                        <p>Research at Berkeley</p>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="profile-tower.jpg" alt="Berkeley Campanile">
-                        <p>Berkeley Campanile</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Education Section -->
     <section id="education" class="pattern-bg">
@@ -745,6 +771,57 @@
             el.style.transform = 'translateY(20px)';
             el.style.transition = 'all 0.6s ease';
             observer.observe(el);
+        });
+
+        // Photo switching functionality
+        const photos = [
+            'profile-graduation.jpg',
+            'profile-building.jpg',
+            'profile-tower.jpg'
+        ];
+        let currentPhotoIndex = 2; // Start with the tower photo
+
+        function switchPhoto() {
+            currentPhotoIndex = (currentPhotoIndex + 1) % photos.length;
+            updatePhoto();
+        }
+
+        function showPhoto(index) {
+            currentPhotoIndex = index;
+            updatePhoto();
+            event.stopPropagation(); // Prevent triggering the parent click
+        }
+
+        function updatePhoto() {
+            const img = document.getElementById('profileImage');
+            const dots = document.querySelectorAll('.indicator-dot');
+            
+            // Fade out effect
+            img.style.opacity = '0';
+            
+            setTimeout(() => {
+                img.src = photos[currentPhotoIndex];
+                img.style.opacity = '1';
+                
+                // Update indicator dots
+                dots.forEach((dot, index) => {
+                    if (index === currentPhotoIndex) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
+            }, 300);
+        }
+
+        // Keyboard navigation for photos
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft') {
+                currentPhotoIndex = (currentPhotoIndex - 1 + photos.length) % photos.length;
+                updatePhoto();
+            } else if (e.key === 'ArrowRight') {
+                switchPhoto();
+            }
         });
     </script>
 </body>
