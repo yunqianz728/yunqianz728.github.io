@@ -352,6 +352,35 @@
             margin-top: 4rem;
         }
 
+        /* Visitor Statistics Section */
+        .visitor-stats {
+            background: var(--white);
+            padding: 2rem 0;
+            text-align: center;
+            color: var(--text-color);
+            font-size: 14px;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+        }
+
+        .visitor-stats span {
+            margin: 0 15px;
+            display: inline-block;
+        }
+
+        .visitor-stats .stat-number {
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 18px;
+            margin: 0 5px;
+        }
+
+        @media (max-width: 600px) {
+            .visitor-stats span {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+
         /* Animations */
         @keyframes fadeInDown {
             from {
@@ -664,21 +693,22 @@
         </div>
     </section>
     
-<!-- 访问统计分隔线 -->
-<div style="text-align: center; margin-top: -2rem; padding-bottom: 1rem; color: rgba(255,255,255,0.8); font-size: 14px;">
-    <span id="busuanzi_container_site_uv" style="display: none;">
-        👥 访客数: <span id="busuanzi_value_site_uv" style="font-weight: bold;"></span> 人
-    </span>
-    <span id="busuanzi_container_site_pv" style="display: none; margin-left: 20px;">
-        👁️ 访问量: <span id="busuanzi_value_site_pv" style="font-weight: bold;"></span> 次
-    </span>
-</div>
-    
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 Yunqian Zhang. All rights reserved.</p>
         <p>Environmental Science Undergraduate Student | Beijing Normal University</p>
     </footer>
+
+    <!-- Visitor Statistics Section -->
+    <div class="visitor-stats">
+        <span id="busuanzi_container_site_uv" style="display: none;">
+            👥 访客数: <span id="busuanzi_value_site_uv" class="stat-number"></span> 人
+        </span>
+        <span style="margin: 0 20px; color: #ddd;">|</span>
+        <span id="busuanzi_container_site_pv" style="display: none;">
+            👁️ 访问量: <span id="busuanzi_value_site_pv" class="stat-number"></span> 次
+        </span>
+    </div>
 
     <script>
         // Smooth scroll behavior for navigation links
@@ -781,17 +811,18 @@
             }
         });
     </script>
+    
     <!-- 不蒜子统计脚本 -->
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<script>
-    // 等待不蒜子加载完成后显示统计
-    var checkBusuanzi = setInterval(function() {
-        if (document.getElementById('busuanzi_value_site_uv').innerText !== '') {
-            document.getElementById('busuanzi_container_site_uv').style.display = 'inline';
-            document.getElementById('busuanzi_container_site_pv').style.display = 'inline';
-            clearInterval(checkBusuanzi);
-        }
-    }, 100);
-</script>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <script>
+        // 等待不蒜子加载完成后显示统计
+        var checkBusuanzi = setInterval(function() {
+            if (document.getElementById('busuanzi_value_site_uv').innerText !== '') {
+                document.getElementById('busuanzi_container_site_uv').style.display = 'inline-block';
+                document.getElementById('busuanzi_container_site_pv').style.display = 'inline-block';
+                clearInterval(checkBusuanzi);
+            }
+        }, 100);
+    </script>
 </body>
 </html>
