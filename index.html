@@ -3,9 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Yunqian Zhang - Environmental Science Researcher at Beijing Normal University, UC Berkeley, and MIT">
-    <meta name="keywords" content="Yunqian Zhang, Environmental Science, Research, Beijing Normal University, UC Berkeley, MIT">
-    <title>Yunqian Zhang - Environmental Science Researcher</title>
+    <meta name="description" content="Yunqian Zhang - Environmental Science Researcher at Beijing Normal University, UC Berkeley, and MIT. Specializing in climate change, remote sensing, and environmental engineering.">
+    <meta name="keywords" content="Yunqian Zhang, 张云倩, Environmental Science, Climate Research, Beijing Normal University, UC Berkeley, MIT, Remote Sensing, Environmental Engineering">
+    <meta name="author" content="Yunqian Zhang">
+    <meta property="og:title" content="Yunqian Zhang - Environmental Science Researcher">
+    <meta property="og:description" content="Personal website of Yunqian Zhang, Environmental Science researcher with experience at BNU, UC Berkeley, and MIT">
+    <meta property="og:url" content="https://yunqianz728.github.io/">
+    <meta property="og:type" content="website">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://yunqianz728.github.io/">
+    <title>Yunqian Zhang - Environmental Science Researcher | 张云倩</title>
     <style>
         * {
             margin: 0;
@@ -87,6 +94,33 @@
             opacity: 0.3;
         }
 
+        .profile-photo {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 2rem;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+            animation: fadeInDown 0.8s ease;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-photo:hover {
+            transform: scale(1.05);
+        }
+
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-photo:hover img {
+            transform: scale(1.1);
+        }
+
         header h1 {
             font-size: 3rem;
             margin-bottom: 1rem;
@@ -144,6 +178,72 @@
             width: 60px;
             height: 3px;
             background: var(--secondary-color);
+        }
+
+        /* About Section */
+        #about {
+            background: var(--white);
+        }
+
+        .about-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .about-content {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-color);
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Photo Gallery */
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .gallery-item {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-item p {
+            padding: 1rem;
+            text-align: center;
+            font-weight: 500;
+            color: var(--accent-color);
+            background: var(--light-bg);
+            margin: 0;
         }
 
         /* Education Cards */
@@ -379,6 +479,9 @@
 
     <!-- Header/Hero Section -->
     <header id="home">
+        <div class="profile-photo">
+            <img src="profile-tower.jpg" alt="Yunqian Zhang">
+        </div>
         <h1>Yunqian Zhang</h1>
         <p>Environmental Science Researcher</p>
         <p>Beijing Normal University | UC Berkeley | MIT</p>
@@ -387,6 +490,31 @@
             <a href="tel:+18577069238">📱 (857) 706-9238</a>
         </div>
     </header>
+
+    <!-- About Section with Photo Gallery -->
+    <section id="about" class="pattern-bg">
+        <h2>About Me</h2>
+        <div class="about-container">
+            <div class="about-content">
+                <p>I am a passionate environmental science researcher currently pursuing my Bachelor's degree at Beijing Normal University, with exchange experiences at UC Berkeley and MIT. My research focuses on climate change, remote sensing, and environmental engineering, with a particular interest in sustainable solutions for global environmental challenges.</p>
+                
+                <div class="photo-gallery">
+                    <div class="gallery-item">
+                        <img src="profile-graduation.jpg" alt="UC Berkeley Graduation">
+                        <p>UC Berkeley Exchange Program</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="profile-building.jpg" alt="Berkeley Campus">
+                        <p>Research at Berkeley</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="profile-tower.jpg" alt="Berkeley Campanile">
+                        <p>Berkeley Campanile</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Education Section -->
     <section id="education" class="pattern-bg">
@@ -411,7 +539,7 @@
             
             <div class="education-card">
                 <h3>Massachusetts Institute of Technology</h3>
-                <p class="date">06/2024 - 08/2024, 07/2025 - 09/2025 (Expected)</p>
+                <p class="date">06/2024 - 08/2024</p>
                 <p><strong>Visiting Student</strong></p>
                 <p>Department of Earth, Atmospheric, and Planetary Sciences (EAPS)</p>
                 <p>Summer research in Prof. Edward A. Boyle's group</p>
