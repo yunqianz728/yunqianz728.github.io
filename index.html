@@ -663,7 +663,17 @@
             </div>
         </div>
     </section>
-
+    
+<!-- 访问统计分隔线 -->
+<div style="text-align: center; margin-top: -2rem; padding-bottom: 1rem; color: rgba(255,255,255,0.8); font-size: 14px;">
+    <span id="busuanzi_container_site_uv" style="display: none;">
+        👥 访客数: <span id="busuanzi_value_site_uv" style="font-weight: bold;"></span> 人
+    </span>
+    <span id="busuanzi_container_site_pv" style="display: none; margin-left: 20px;">
+        👁️ 访问量: <span id="busuanzi_value_site_pv" style="font-weight: bold;"></span> 次
+    </span>
+</div>
+    
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 Yunqian Zhang. All rights reserved.</p>
@@ -771,5 +781,17 @@
             }
         });
     </script>
+    <!-- 不蒜子统计脚本 -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script>
+    // 等待不蒜子加载完成后显示统计
+    var checkBusuanzi = setInterval(function() {
+        if (document.getElementById('busuanzi_value_site_uv').innerText !== '') {
+            document.getElementById('busuanzi_container_site_uv').style.display = 'inline';
+            document.getElementById('busuanzi_container_site_pv').style.display = 'inline';
+            clearInterval(checkBusuanzi);
+        }
+    }, 100);
+</script>
 </body>
 </html>
