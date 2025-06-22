@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Yunqian Zhang - Environmental Science Researcher at Beijing Normal University, UC Berkeley, and MIT. Specializing in climate change, remote sensing, and environmental engineering.">
-    <meta name="keywords" content="Yunqian Zhang, 张云茜, Environmental Science, Climate Research, Beijing Normal University, UC Berkeley, MIT, Remote Sensing, Environmental Engineering, Ocean Science, Envirnmental Economics">
+    <meta name="keywords" content="Yunqian Zhang, 张云倩, Environmental Science, Climate Research, Beijing Normal University, UC Berkeley, MIT, Remote Sensing, Environmental Engineering, Ocean Science, Environmental Economics">
     <meta name="author" content="Yunqian Zhang">
-    <meta property="og:title" content="Yunqian Zhang">
+    <meta property="og:title" content="Yunqian Zhang - Environmental Science Researcher">
     <meta property="og:description" content="Personal website of Yunqian Zhang, Environmental Science researcher with experience at BNU, UC Berkeley, and MIT">
     <meta property="og:url" content="https://yunqianz728.github.io/">
     <meta property="og:type" content="website">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://yunqianz728.github.io/">
-    <title>Yunqian Zhang | 张云倩</title>
+    <title>Yunqian Zhang - Environmental Science Researcher | 张云倩</title>
     <style>
         * {
             margin: 0;
@@ -148,7 +148,7 @@
         }
 
         .profile-photo::after {
-            content: '点击切换照片';
+            content: 'Click to switch';
             position: absolute;
             bottom: 10px;
             left: 50%;
@@ -224,72 +224,6 @@
             width: 60px;
             height: 3px;
             background: var(--secondary-color);
-        }
-
-        /* About Section */
-        #about {
-            background: var(--white);
-        }
-
-        .about-container {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .about-content {
-            text-align: center;
-            padding: 2rem;
-        }
-
-        .about-content p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: var(--text-color);
-            margin-bottom: 3rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* Photo Gallery */
-        .photo-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .gallery-item {
-            background: var(--white);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: transform 0.3s ease;
-        }
-
-        .gallery-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.05);
-        }
-
-        .gallery-item p {
-            padding: 1rem;
-            text-align: center;
-            font-weight: 500;
-            color: var(--accent-color);
-            background: var(--light-bg);
-            margin: 0;
         }
 
         /* Education Cards */
@@ -369,6 +303,31 @@
         .research-item ul li {
             margin-bottom: 0.5rem;
             line-height: 1.8;
+        }
+
+        /* Publication status badge */
+        .pub-status {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-left: 0.5rem;
+        }
+
+        .pub-status.published {
+            background-color: #d4edda;
+            color: #155724;
+        }
+
+        .pub-status.submitted {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+
+        .pub-status.preparation {
+            background-color: #e2e3e5;
+            color: #383d41;
         }
 
         /* Skills Section */
@@ -517,16 +476,17 @@
             <li><a href="#home">Home</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#research">Research</a></li>
+            <li><a href="#publications">Publications</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#awards">Awards</a></li>
-            <li><a href="#volunteer">Volunteer</a></li>
+            <li><a href="#meetings">Meetings</a></li>
         </ul>
     </nav>
 
     <!-- Header/Hero Section -->
     <header id="home">
         <div class="profile-photo" onclick="switchPhoto()">
-            <img id="profileImage" src="profile-tower.jpg" alt="Yunqian Zhang">
+            <img id="profileImage" src="profile-tower.jpg.jpg" alt="Yunqian Zhang">
         </div>
         <div class="photo-indicators">
             <span class="indicator-dot" onclick="showPhoto(0)"></span>
@@ -574,16 +534,17 @@
 
     <!-- Research Section -->
     <section id="research">
-        <h2>Research Projects</h2>
+        <h2>Research Experience</h2>
         <div class="research-container">
             <div class="research-item">
-                <h3>Determination of vertical distribution and isotopic ratio of trace element Cr in the Pacific Ocean</h3>
-                <p class="institution">Prof. Edward A Boyle's Group, MIT EAPS</p>
+                <h3>Spatio-Temporal Optimization Modeling for National Photovoltaic Infrastructure Deployment</h3>
+                <p class="institution">Prof. Xin Tian's Group, Beijing Normal University</p>
                 <p class="date">06/2024 - Present</p>
                 <ul>
-                    <li>Conducted experiments to obtain data, including seawater samples acidification and equilibration</li>
-                    <li>Cr precipitation/dissolution with Mg(OH)₂, ion exchange purification, sulfur removal</li>
-                    <li>Sample preparation for MC-ICP-MS analysis</li>
+                    <li>Developed multi-period dynamic optimization model for PV deployment strategy across China</li>
+                    <li>Integrated diverse multi-source datasets (GIS, meteorological, economic) to quantify comprehensive cost functions</li>
+                    <li>Utilized Python for spatio-temporal data analysis and established constraints for provincial land availability</li>
+                    <li>Employed CatBoost machine learning models for robust data imputation and time-series forecasting</li>
                 </ul>
             </div>
 
@@ -592,9 +553,9 @@
                 <p class="institution">Prof. Charles Taylor's Group, Harvard Kennedy School</p>
                 <p class="date">12/2024 - Present</p>
                 <ul>
-                    <li>Generated month-to-month LSWI, NDVI, Land-use and other indexes from GEE's remote sensing data</li>
-                    <li>Combined with phenology data to classify China's land into non-cropped, dry-rice-cultivation, and wet-rice-cultivation land (2008-2022)</li>
-                    <li>Analyzed the reducing effect of dry-rice-cultivation on methane emission data</li>
+                    <li>Generated month-to-month LSWI, NDVI, and land-use indices from GEE's remote sensing data</li>
+                    <li>Classified China's agricultural land into non-cropped, dry-rice, and wet-rice cultivation areas (2008-2022)</li>
+                    <li>Quantified methane emission reduction potential through dry-rice cultivation practices</li>
                 </ul>
             </div>
 
@@ -603,10 +564,9 @@
                 <p class="institution">Prof. Lu Liang's Group, UC Berkeley CED</p>
                 <p class="date">08/2024 - 02/2025</p>
                 <ul>
-                    <li>Enhanced tree crown delineation using SAM 2 with RGB and LiDAR data fusion</li>
-                    <li>Combined bounding boxes and LiDAR point prompts with noise reduction via sampling</li>
-                    <li>Demonstrated SAM 2's potential for efficient ITC segmentation in complex forests</li>
-                    <li>Paper currently in preparation</li>
+                    <li>Enhanced tree crown delineation accuracy using SAM 2 with RGB and LiDAR data fusion</li>
+                    <li>Developed novel prompt engineering techniques combining bounding boxes and LiDAR point clouds</li>
+                    <li>Achieved significant improvement in ITC segmentation precision for complex forest environments</li>
                 </ul>
             </div>
 
@@ -615,102 +575,141 @@
                 <p class="institution">UC Berkeley</p>
                 <p class="date">08/2024 - Present</p>
                 <ul>
-                    <li>Developed ML model to generate LCZ distribution maps using LiDAR and satellite imagery</li>
-                    <li>Engineered automated pipeline to process 50,000+ Google Street View images across 20+ cities</li>
-                    <li>Implemented computer vision techniques to quantify urban canyon characteristics</li>
-                    <li>Integrated multi-source climate data to analyze correlation with LCZ classifications</li>
+                    <li>Developed machine learning model generating LCZ distribution maps for 20+ U.S. cities</li>
+                    <li>Engineered automated pipeline processing 50,000+ Google Street View images</li>
+                    <li>Quantified urban canyon characteristics including SVF, vegetation cover, and building proportions</li>
+                    <li>Analyzed correlations between urban morphology and climate variables (PM2.5, humidity, temperature)</li>
                 </ul>
             </div>
 
             <div class="research-item">
-                <h3>Spatio-Temporal Optimization Modeling for National Photovoltaic Infrastructure Deployment</h3>
+                <h3>Determination of Chromium Isotopic Composition in Pacific Ocean Water Column</h3>
+                <p class="institution">Prof. Edward A. Boyle's Group, MIT EAPS</p>
+                <p class="date">06/2024 - 08/2024</p>
+                <ul>
+                    <li>Conducted trace metal clean laboratory procedures for seawater sample processing</li>
+                    <li>Performed Cr precipitation/co-precipitation with Mg(OH)₂ and ion exchange chromatography</li>
+                    <li>Prepared samples for MC-ICP-MS isotopic analysis to study ocean biogeochemical cycles</li>
+                </ul>
+            </div>
+
+            <div class="research-item">
+                <h3>Chinese Digital Technology Industry's Carbon Emission Analysis</h3>
                 <p class="institution">Prof. Xin Tian's Group, Beijing Normal University</p>
-                <p class="date">06/2025 - Present</p>
+                <p class="date">08/2023 - 12/2023</p>
                 <ul>
-                    <li>Developed multi-period dynamic optimization model for PV deployment across China</li>
-                    <li>Integrated diverse datasets (GIS, meteorological, economic) for comprehensive cost analysis</li>
-                    <li>Utilized Python for spatio-temporal data analysis and site suitability assessment</li>
-                    <li>Employed CatBoost ML models for robust data imputation and forecasting</li>
+                    <li>Applied Leontief input-output model to analyze carbon emission patterns in ICT sector</li>
+                    <li>Conducted structural path analysis (SPA) and structural decomposition analysis (SDA)</li>
+                    <li>Co-authored 47-page policy report funded by China Mobile Corporation</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="pattern-bg">
+        <h2>Publications</h2>
+        <div class="research-container">
+            <div class="research-item">
+                <h3>Peer-Reviewed Publications</h3>
+                <p class="institution">Published Papers</p>
+                <ul>
+                    <li><strong>Spatial distribution, source identification, and potential risks of 14 bisphenol analogues in soil from different functional zones in Chengdu, China</strong> <span class="pub-status published">Published</span><br>
+                    <em>Environment Pollution</em>, 2024. DOI: 10.1016/j.envpol.2024.124064</li>
+                    
+                    <li><strong>Polyethylene microplastics hamper aged biochar's potential in mitigating greenhouse gas emissions</strong> <span class="pub-status published">Published</span><br>
+                    <em>Carbon Research</em>, 2024. DOI: 10.1007/s44246-024-00170-9</li>
                 </ul>
             </div>
 
             <div class="research-item">
-                <h3>Published Research Papers</h3>
-                <p class="institution">Various Collaborations</p>
-                <p class="date">2023 - 2025</p>
+                <h3>Manuscripts Under Review</h3>
+                <p class="institution">Submitted Papers</p>
                 <ul>
-                    <li><strong>Spatial distribution of bisphenol analogues in soil from Chengdu, China</strong> - Published in Environment Pollution (DOI: 10.1016/j.envpol.2024.124064)</li>
-                    <li><strong>Polyethylene microplastics hamper aged biochar's potential</strong> - Published in Carbon Research (DOI: 10.1007/s44246-024-00170-9)</li>
-                    <li><strong>Ecological surprises and bioremediation potential</strong> - Submitted to Earth-Science Reviews</li>
-                    <li><strong>Coupling index of heavy metal immobilization</strong> - Submitted for publication</li>
+                    <li><strong>Ecological surprises and bioremediation potential of oil pollution in coastal ecosystems: A review</strong> <span class="pub-status submitted">Under Review</span><br>
+                    Submitted to <em>Earth-Science Reviews</em>, January 2025</li>
+                    
+                    <li><strong>Coupling index of heavy metal immobilization and carbon sequestration reveals superior long-term performance of high-dosage biochar</strong> <span class="pub-status submitted">Under Review</span><br>
+                    Submitted for publication, December 2024</li>
+                </ul>
+            </div>
+
+            <div class="research-item">
+                <h3>Manuscripts in Preparation</h3>
+                <p class="institution">Working Papers</p>
+                <ul>
+                    <li><strong>LiDAR-Augmented Zero-Shot Tree Crown Segmentation Using SAM 2</strong> <span class="pub-status preparation">In Preparation</span><br>
+                    Target journal: <em>Remote Sensing of Environment</em></li>
                 </ul>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="pattern-bg">
-        <h2>Skills & Languages</h2>
+    <section id="skills">
+        <h2>Technical Skills</h2>
         <div class="skills-container">
             <div class="skill-category">
                 <h3>Programming Languages</h3>
-                <p>Python, C/C++, Java</p>
+                <p>Python (Advanced), R (Intermediate), C/C++ (Basic), Java (Basic)</p>
             </div>
             
             <div class="skill-category">
-                <h3>Data Analysis & Visualization</h3>
-                <p>R, MATLAB, Excel, ArcGIS (Pro), QGIS, Google Earth Engine (GEE)</p>
+                <h3>Geospatial Analysis</h3>
+                <p>Google Earth Engine (GEE), ArcGIS Pro, QGIS, Remote Sensing, LiDAR Processing</p>
+            </div>
+            
+            <div class="skill-category">
+                <h3>Data Science & Visualization</h3>
+                <p>Machine Learning (CatBoost, Random Forest), MATLAB, Excel, Statistical Analysis</p>
             </div>
             
             <div class="skill-category">
                 <h3>Languages</h3>
-                <p>Chinese (Fluent), English (TOEFL 108)</p>
-            </div>
-            
-            <div class="skill-category">
-                <h3>Arts & Music</h3>
-                <p>Flute (Orchestra performer), Singing (Award winner)</p>
+                <p>Chinese (Native), English (Fluent - TOEFL 108)</p>
             </div>
         </div>
     </section>
 
     <!-- Awards Section -->
-    <section id="awards">
-        <h2>Awards & Honors</h2>
+    <section id="awards" class="pattern-bg">
+        <h2>Honors & Awards</h2>
         <div class="awards-list">
             <ul>
-                <li>First Prize Scholarship of Beijing Normal University (1/29)</li>
+                <li>First Prize Scholarship of Beijing Normal University (Rank: 1/29)</li>
                 <li>First Prize of Undergraduate Incentive Scholarship</li>
                 <li>Three Good Student Scholarship</li>
                 <li>Second Prize Competition Scholarship of Beijing Normal University</li>
-                <li>Third Prize in Physics Competition for College Students in Some Regions of China</li>
+                <li>Third Prize in Physics Competition for College Students</li>
                 <li>Second Prize in National College Student Municipal Environmental Innovation Practice Competition (Vice Team Leader)</li>
-                <li>Best Instrumental Performance - "West Side Story" at 2022 Beijing University Music Festival</li>
+                <li>Best Instrumental Performance Award - "West Side Story" at 2022 Beijing University Music Festival</li>
+                <li>Innovation Research Report Award - 2023 College Student Social Research Project</li>
             </ul>
         </div>
     </section>
 
-    <!-- Volunteer Section -->
-    <section id="volunteer" class="pattern-bg">
-        <h2>Volunteer Experience & Talks</h2>
+    <!-- Meetings Section -->
+    <section id="meetings">
+        <h2>Conference Presentations & Volunteer Experience</h2>
         <div class="research-container">
             <div class="research-item">
-                <h3>Research Team Leader - Dali, Yunnan</h3>
-                <p class="date">Summer 2023</p>
+                <h3>NSF NCAR Mesa Lab and Zoom</h3>
+                <p class="institution">Boulder, CO</p>
+                <p class="date">June 23-24, 2025</p>
                 <ul>
-                    <li>Organized a team of 12 students from BNU to Dali, Yunnan</li>
-                    <li>Completed research report on local cultivation, recycling technology and culture</li>
-                    <li>Won "Innovation Research Report" award in 2023 Inspiration Plan College Student Social Research</li>
+                    <li>Poster Presentation: <strong>"Nationwide Calibration of PurpleAir Temperature Sensors for Heat Exposure Research"</strong></li>
+                    <li>Presented novel calibration methodology for citizen science air quality monitoring networks</li>
                 </ul>
             </div>
             
             <div class="research-item">
-                <h3>Educational Talk Assistant - Hong Kong</h3>
-                <p class="date">November 2023</p>
+                <h3>Research Team Leader - Rural Development Study</h3>
+                <p class="institution">Dali, Yunnan Province</p>
+                <p class="date">Summer 2023</p>
                 <ul>
-                    <li>Assisted Prof. Xin Tian in delivering educational talks on environmental topics</li>
-                    <li>Topics included greenhouse effect, natural disasters, extreme weather, and emission reduction</li>
-                    <li>Presented at local elementary school</li>
+                    <li>Led interdisciplinary team of 12 students investigating sustainable agricultural practices</li>
+                    <li>Conducted field research on local cultivation techniques and recycling technology</li>
+                    <li>Received "Innovation Research Report" award for comprehensive analysis of rural development</li>
                 </ul>
             </div>
         </div>
@@ -774,9 +773,9 @@
 
         // Photo switching functionality
         const photos = [
-            'profile-graduation.jpg.jpg',
+            'profile-graduation.jpg',
             'profile-building.jpg',
-            'profile-tower.jpg'
+            'profile-tower.jpg.jpg'
         ];
         let currentPhotoIndex = 2; // Start with the tower photo
 
