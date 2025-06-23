@@ -48,6 +48,21 @@
             transition: all 0.3s ease;
         }
 
+        .nav-brand {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            display: none;
+        }
+
+        .nav-brand a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
         nav ul {
             list-style: none;
             display: flex;
@@ -72,6 +87,46 @@
             color: var(--accent-color);
         }
 
+        /* Mobile Navigation Toggle */
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: var(--primary-color);
+            margin: 5px 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .nav-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .nav-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+
+        @media (max-width: 768px) {
+            .nav-brand {
+                display: block;
+            }
+        }
+
         /* Header/Hero Section */
         header {
             background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
@@ -80,6 +135,12 @@
             text-align: center;
             position: relative;
             overflow: hidden;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 6rem 2rem 3rem;
+            }
         }
 
         header::before {
@@ -423,13 +484,45 @@
                 font-size: 1.1rem;
             }
             
+            /* Mobile Navigation */
+            nav {
+                padding: 0.8rem 1rem;
+            }
+            
+            .nav-toggle {
+                display: block;
+            }
+            
             nav ul {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
                 flex-direction: column;
                 align-items: center;
+                padding: 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+                box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            }
+            
+            nav.active ul {
+                max-height: 400px;
+                padding: 1rem 0;
             }
             
             nav ul li {
-                margin: 0.5rem 0;
+                margin: 0.8rem 0;
+                opacity: 0;
+                transform: translateY(-10px);
+                transition: all 0.3s ease;
+            }
+            
+            nav.active ul li {
+                opacity: 1;
+                transform: translateY(0);
             }
             
             section {
@@ -456,14 +549,27 @@
 <body>
     <!-- Navigation -->
     <nav>
+        <div class="nav-brand">
+        .nav-brand a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        </div>
+        <button class="nav-toggle" onclick="toggleNav()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#research">Research</a></li>
-            <li><a href="#publications">Publications</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#awards">Awards</a></li>
-            <li><a href="#meetings">Meetings</a></li>
+            <li><a href="#home" onclick="closeNav()">Home</a></li>
+            <li><a href="#education" onclick="closeNav()">Education</a></li>
+            <li><a href="#research" onclick="closeNav()">Research</a></li>
+            <li><a href="#publications" onclick="closeNav()">Publications</a></li>
+            <li><a href="#skills" onclick="closeNav()">Skills</a></li>
+            <li><a href="#awards" onclick="closeNav()">Awards</a></li>
+            <li><a href="#meetings" onclick="closeNav()">Meetings</a></li>
         </ul>
     </nav>
 
@@ -789,6 +895,31 @@
     </div>
 
     <script>
+        // Mobile Navigation Toggle
+        function toggleNav() {
+            const nav = document.querySelector('nav');
+            const navToggle = document.querySelector('.nav-toggle');
+            nav.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        }
+
+        function closeNav() {
+            const nav = document.querySelector('nav');
+            const navToggle = document.querySelector('.nav-toggle');
+            nav.classList.remove('active');
+            navToggle.classList.remove('active');
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const nav = document.querySelector('nav');
+            const navToggle = document.querySelector('.nav-toggle');
+            if (!nav.contains(event.target) && nav.classList.contains('active')) {
+                nav.classList.remove('active');
+                navToggle.classList.remove('active');
+            }
+        });
+
         // Smooth scroll behavior for navigation links
         document.querySelectorAll('nav a').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
