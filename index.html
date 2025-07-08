@@ -242,6 +242,28 @@
             background: var(--secondary-color);
         }
 
+        /* News Gallery Styles */
+        .news-gallery {
+            display: flex;
+            flex-wrap: wrap; /* 在小屏幕上自动换行 */
+            gap: 1rem;      /* 图片之间的间距 */
+            margin-top: 1.5rem; /* 与上方文字的间距 */
+        }
+
+        .news-gallery img {
+            flex: 1 1 200px; /* 让图片自动填充空间，基础宽度200px */
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px; /* 圆角效果 */
+            object-fit: cover;  /* 保持图片比例不变，填满空间 */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .news-gallery img:hover {
+            transform: scale(1.03); /* 鼠标悬浮时放大效果 */
+        }
+
         /* Education Cards */
         .education-container {
             display: grid;
@@ -732,6 +754,13 @@
                 <p class="institution">Boulder, CO, USA</p>
                 <p class="date">June 2025</p>
                 <p>I had the wonderful opportunity to present my research on "Nationwide Calibration of PurpleAir Temperature Sensors for Heat Exposure Research" at the NSF NCAR Symposium. It was a great experience sharing my work and learning from others in the field of extreme heat research.</p>
+                
+                <div class="news-gallery">
+                    <img src="6f4cafa8a016a4e9aaa651554f225f6.jpg" alt="Photo from the NCAR symposium">
+                    <img src="596318308896153bb8ac0fdb4a08c55c.jpg" alt="Photo from the NCAR symposium">
+                    <img src="a5615263637c57e7d481e753724d3c71.jpg" alt="Photo from the NCAR symposium">
+                    <img src="f5b80b8e7ba79176f56838bc07b8a63a.jpg" alt="Photo from the NCAR symposium">
+                </div>
                 </div>
         </div>
     </section>
