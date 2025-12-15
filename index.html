@@ -616,8 +616,8 @@
                 <p class="date">09/2022 - 07/2026 (Expected)</p>
                 <p><strong>Bachelor of Science in Environmental Science</strong></p>
                 <p>School of Environment, Beijing, China</p>
-                <p>• GPA: 3.87/4.00</p>
-                <p>• TOEFL: 108</p>
+                <p>• GPA: 3.86/4.00</p>
+                <p>• TOEFL: 108 | IELTS: 7.5 | GRE: 325 (170Q, 155V)</p>
             </div>
             
             <div class="education-card">
@@ -642,12 +642,14 @@
         <h2>Research Experience</h2>
         <div class="research-container">
             <div class="research-item">
-                <h3>Determination of Vertical Distribution and Isotopic Ratio of Trace Element Cr in the Pacific Ocean</h3>
+                <h3>Chromium Isotopes and Cr(VI) in Seawater: Implications for Ultramafic Weathering and CO₂ Variability</h3>
                 <p class="institution">Prof. Edward A. Boyle's Group, MIT EAPS</p>
-                <p class="date">06/2024 - Present</p>
+                <p class="date">06/2024 - 08/2024 & 07/2025 - 09/2025</p>
                 <ul>
-                    <li>Conducted experiments including seawater sample acidification and equilibration, Cr precipitation/dissolution with Mg(OH)₂, ion exchange purification, sulfur removal, and sample preparation for MC-ICP-MS analysis.</li>
-                    <li>Engaged in paper reviewing and calculation work.</li>
+                    <li>Conducted MC-ICP-MS measurements of Cr concentrations and δ⁵³Cr isotopic compositions in seawater profiles from the tropical Pacific Ocean.</li>
+                    <li>Performed ion exchange purification, Cr(VI) precipitation with Mg(OH)₂, and sample preparation for high-precision isotope analysis.</li>
+                    <li>Compiled published data on Cr concentrations/isotopic compositions in rivers, oceans, and weathering systems to test Kent-Muttoni and Jagoutz hypotheses on long-term climate variability.</li>
+                    <li>Supported NSF proposal development by synthesizing evidence linking ultramafic weathering patterns to atmospheric CO₂ variability and paleoclimate reconstruction.</li>
                 </ul>
             </div>
 
@@ -656,10 +658,10 @@
                 <p class="institution">Prof. Charles Taylor's Group, Harvard Kennedy School</p>
                 <p class="date">12/2024 - Present</p>
                 <ul>
-                    <li>Developed machine learning algorithms to process Google Earth Engine (GEE) remote sensing data for agricultural land classification across China (2008-2024).</li>
-                    <li>Created high-resolution spatiotemporal maps distinguishing rice cultivation systems.</li>
-                    <li>Quantified the impact of agricultural policy on methane emissions by analyzing cultivation practice transitions.</li>
-                    <li>Established statistical models linking land-use changes to methane emission patterns.</li>
+                    <li>Developed a web scraping pipeline to systematically collect policy approval data from Chinese provincial government websites, creating a novel county-level dataset on dryland rice seed policies (2008-2024).</li>
+                    <li>Engineered provincial phenological model in Google Earth Engine to distinguish rain-fed from irrigated rice using multi-parameter indicators (NDVI, LSWI, slope), calibrated against MIRCA-OS reference data.</li>
+                    <li>Conducted event study analysis using 39,045 county-year observations (2,432 treated, 363 controls) to evaluate causal impact of water-saving policies. Found policies achieved water conservation through technological improvements rather than production reduction (irrigated area: β=-4.09 km², p=0.92).</li>
+                    <li>Initiated TROPOMI/GOSAT atmospheric methane analysis to assess environmental outcomes of cultivation system transitions.</li>
                 </ul>
             </div>
 
@@ -668,9 +670,8 @@
                 <p class="institution">Prof. Lu Liang's Group, UC Berkeley CED</p>
                 <p class="date">08/2024 - 02/2025</p>
                 <ul>
-                    <li>Enhanced tree crown delineation using SAM 2 with RGB and LiDAR data fusion.</li>
-                    <li>Combined bounding boxes and LiDAR point prompts, with noise reduction via sampling.</li>
-                    <li>Demonstrated that LiDAR boosts precision and recall for ITC segmentation.</li>
+                    <li>Enhanced tree crown delineation by fusing SAM 2 with RGB and LiDAR data, combining bounding boxes and LiDAR point prompts with noise reduction via sampling.</li>
+                    <li>Demonstrated SAM 2's potential for efficient ITC segmentation in complex forests, with LiDAR significantly boosting precision and recall.</li>
                     <li>Paper published in <em>Information Geography</em>. DOI: <a href="https://doi.org/10.1016/j.infgeo.2025.100025" target="_blank">10.1016/j.infgeo.2025.100025</a></li>
                 </ul>
             </div>
@@ -689,25 +690,95 @@
             </div>
 
             <div class="research-item">
-                <h3>Global Dust Emission Dynamics Under Climate Change and Land Use Management</h3>
-                <p class="institution">Prof. Minghao Qiu's Group, Stony Brook University</p>
+                <h3>Nationwide Calibration of PurpleAir Temperature Sensors for Heat Exposure Research</h3>
+                <p class="institution">Prof. Lu Liang's Group, UC Berkeley CED</p>
                 <p class="date">05/2025 - Present</p>
                 <ul>
-                    <li>Analyzed global dust emissions using CAMS satellite data (2003-2020) to identify trends in Dust Aerosol Optical Depth (DAOD).</li>
-                    <li>Integrated meteorological and vegetation datasets to examine regional dust activity.</li>
-                    <li>Will conduct comprehensive analysis of impact factors like ecological projects and climate variables on dust dynamics.</li>
+                    <li>Developed machine learning calibration framework for 98 PurpleAir sensors across 31 U.S. states, integrating 797,744 hourly observations (943 days, 2022-2024) with ERA5 meteorological reanalysis through spatial-temporal matching and quality control.</li>
+                    <li>Engineered 63 features capturing sensor thermal dynamics: 32 temporal features (lagged variables, rolling statistics, cumulative radiation, thermal streak indicators) and 31 spatial/meteorological features; temporal features reduced error by 29% compared to spatial-only models.</li>
+                    <li>Implemented temperature-based stratification (cold/normal/hot regimes) achieving test-set MAE of 0.38-0.53°C and RMSE of 0.57-0.74°C, representing 32-51% improvement over unstratified national baseline; outperformed climate-zone stratification in data-sparse regions.</li>
+                    <li>Evaluated four gradient boosting frameworks (XGBoost, LightGBM, CatBoost, Random Forest) with Bayesian hyperparameter optimization; stratified XGBoost ensemble achieved R²=0.975 for nationwide deployment.</li>
+                    <li>Conducted SHAP interpretability analysis revealing sensor temperature history, solar radiation accumulation, and humidity dynamics as dominant error drivers, with distinct hierarchies across thermal regimes; findings enable hyperlocal monitoring for heat-health assessment and environmental justice applications.</li>
+                    <li>Authored research manuscript (under review) and presented poster at NSF NCAR Research Symposium: Human and Geographic Dimensions of Extreme Heat and Heat Risk.</li>
+                </ul>
+            </div>
+
+            <div class="research-item">
+                <h3>Global Dust Emission Dynamics Under Climate Change and Land Use Management: A Multi-satellite Analysis (2003-2020)</h3>
+                <p class="institution">Prof. Minghao Qiu's Group, School of Marine and Atmospheric Sciences and Program in Public Health, Stony Brook University</p>
+                <p class="date">05/2025 - Present</p>
+                <ul>
+                    <li>Resolved the "greening-dust paradox": naive correlation showed vegetation increase associated with MORE dust (+0.374), but causal analysis revealed strong protective effect after controlling for climate confounders (0.1 NDVI increase reduces AOD by 0.017-0.020 units, 25-30% of mean).</li>
+                    <li>Integrated 22 years of CAMS and MODIS satellite data (2003-2024) across 1,336 grid cells in northern China and Mongolia, implementing dual-method causal framework: Random Forest counterfactual analysis (R²=0.77) validated with panel regression.</li>
+                    <li>Conducted mediation analysis revealing 97% of vegetation's dust-reducing effect operates through direct physical mechanisms (canopy interception, surface stabilization) rather than indirect pathways, implying rapid policy benefits without decades of ecosystem development.</li>
+                    <li>Identified 35-fold spatial heterogeneity: barren lands show 3-6× stronger effects than grasslands/croplands; core dust regions exhibit 35× stronger effects than non-source areas, providing evidence for strategic targeting.</li>
+                    <li>Demonstrated policy implications: strategic allocation toward high-impact zones (barren lands in core dust regions) could increase aggregate dust reduction by 40-60% with the same $3-5 billion annual budget, offering cost-effective alternatives to current uniform policies.</li>
+                    <li>Validated causality through spatial placebo tests (p<0.001) and temporal stability analysis across 22 years (trend p=0.446), supporting external validity and policy persistence.</li>
                 </ul>
             </div>
             
-             <div class="research-item">
+            <div class="research-item">
+                <h3>Chinese Think Tank Project: Digital Technology Industry's Role in Low Carbon Development - Key Strategies and Drivers</h3>
+                <p class="institution">Prof. Xin Tian's Group, School of Environment, Beijing Normal University</p>
+                <p class="date">08/2023 - 12/2023</p>
+                <ul>
+                    <li>Applied Leontief input-output model and Structural Path Analysis to quantify carbon emissions across China's digital technology supply chain.</li>
+                    <li>Evaluated ICT sector inter-dependencies using backward/forward linkage analysis and influence coefficients.</li>
+                    <li>Used Structural Path Analysis (SPA) to identify how various economic activities impact carbon emissions and employed Structural Decomposition Analysis (SDA) to break down emission intensity into distinct factors.</li>
+                    <li>Co-authored 47-page policy report published by China Mobile Corporation.</li>
+                </ul>
+            </div>
+
+            <div class="research-item">
                 <h3>Spatio-Temporal Optimization Modeling for National Photovoltaic Infrastructure Deployment</h3>
-                <p class="institution">Prof. Xin Tian's Group, Beijing Normal University</p>
+                <p class="institution">Prof. Xin Tian's Group, School of Environment, Beijing Normal University</p>
                 <p class="date">06/2025 - Present</p>
                 <ul>
-                    <li>Developed a multi-period dynamic optimization model to determine optimal PV deployment in China over 50 years.</li>
-                    <li>Integrated GIS, meteorological, and economic data to build a comprehensive cost function.</li>
-                    <li>Utilized Python for spatio-temporal analysis to assess site suitability and model constraints.</li>
-                    <li>Employed CatBoost machine learning models for data imputation and forecasting.</li>
+                    <li>Developed multi-period dynamic optimization model for 50-year PV deployment strategy across China, minimizing life-cycle costs using operations research framework.</li>
+                    <li>Integrated GIS, meteorological, and economic data to quantify cost function (CAPEX, O&M, transmission, decommissioning, ecological opportunity costs).</li>
+                    <li>Employed CatBoost for data imputation and time-series forecasting of demand and cost reduction curves.</li>
+                </ul>
+            </div>
+
+            <div class="research-item">
+                <h3>Ecological surprises and bioremediation potential of oil pollution in coastal ecosystems: A review</h3>
+                <p class="institution">Prof. Junhong Bai's Group, School of Environment, Beijing Normal University</p>
+                <p class="date">05/2024 - 01/2025</p>
+                <ul>
+                    <li>Conducted comprehensive literature review of bioremediation methods (phytoremediation, microbial, nanotechnology) for petroleum contamination in mangroves, salt marshes, seagrasses.</li>
+                    <li>Highlighted advanced approaches including omics technologies, engineered microbes, and real-time monitoring systems while addressing challenges such as salinity, low oxygen conditions, and nutrient limitations.</li>
+                </ul>
+            </div>
+
+            <div class="research-item">
+                <h3>Spatial distribution, source identification, and potential risks of 14 bisphenol analogues in soil from different functional zones in Chengdu, China</h3>
+                <p class="institution">Prof. Zhi Li's Group, College of Architecture & Environment, Sichuan University</p>
+                <p class="date">02/2023 - 02/2024</p>
+                <ul>
+                    <li>Analyzed spatial distribution of 14 bisphenol compounds across functional zones in Chengdu using 376 dust samples.</li>
+                    <li>Applied normality, correlation, and Mann-Whitney U tests for statistical analysis.</li>
+                </ul>
+            </div>
+
+            <div class="research-item">
+                <h3>Polyethylene microplastics hamper aged biochar's potential in mitigating greenhouse gas emissions</h3>
+                <p class="institution">Prof. Ke Sun's Group, School of Environment, Beijing Normal University</p>
+                <p class="date">12/2023 - 01/2025</p>
+                <ul>
+                    <li>Investigated interactive effects of PE microplastics and decadal biochar on CO₂/N₂O emissions through incubation and field experiments.</li>
+                    <li>Revealed microplastics reduced biochar's mitigation effectiveness by 44-82% via altered soil structure and microbial activity.</li>
+                </ul>
+            </div>
+
+            <div class="research-item">
+                <h3>Fourteen-year field evidence reveals superior co-benefits of biochar in immobilizing heavy metals and sequestering carbon</h3>
+                <p class="institution">Prof. Ke Sun's Group, School of Environment, Beijing Normal University</p>
+                <p class="date">12/2024 - 11/2025</p>
+                <ul>
+                    <li>Analyzed 376 soil samples from a 14-year field experiment (2007-2021) to quantify long-term effects of biochar vs. straw amendments on heavy metal dynamics in agricultural soils.</li>
+                    <li>Performed comprehensive data analyses including DGT bioavailability measurements for 6 heavy metals (Cd, Pb, Ni, Co, Cu, Mo) and BCR sequential extraction for speciation analysis.</li>
+                    <li>Applied advanced statistical modeling (PLS-SEM, VPA) on over 40 soil physicochemical and microbial parameters to deconvolve regulatory pathways, identifying that microbial properties explained 30% of metal bioavailability variance while physicochemical factors governed 12% of speciation shifts.</li>
+                    <li>Co-developed a novel Carbon-Metal Coupling Index using entropy weight method, demonstrating high-dosage biochar achieved 0.703 coupling score (vs. 0.361 for low-dosage biochar and 0.396 for straw), representing 94% improvement in synergistic benefits.</li>
                 </ul>
             </div>
         </div>
@@ -725,6 +796,8 @@
                     <em>Environment Pollution</em>, 2024. <a href="https://doi.org/10.1016/j.envpol.2024.124064" target="_blank">DOI: 10.1016/j.envpol.2024.124064</a></li>
                     <li><strong>Polyethylene microplastics hamper aged biochar's potential in mitigating greenhouse gas emissions</strong> <span class="pub-status published">Published</span><br>
                     <em>Carbon Research</em>, 2024. <a href="https://doi.org/10.1007/s44246-024-00170-9" target="_blank">DOI: 10.1007/s44246-024-00170-9</a></li>
+                    <li><strong>Fourteen-year field evidence reveals superior co-benefits of biochar in immobilizing heavy metals and sequestering carbon</strong> <span class="pub-status published">Accepted</span><br>
+                    <em>Biochar</em>, 2025.</li>
                 </ul>
             </div>
              <div class="research-item">
@@ -737,10 +810,10 @@
             <div class="research-item">
                 <h3>Manuscripts Under Review</h3>
                 <ul>
-                    <li><strong>Ecological surprises and bioremediation potential of oil pollution in coastal ecosystems: A review</strong> <span class="pub-status submitted">Submitted</span><br>
+                    <li><strong>Ecological Surprises and Bioremediation Potential of Oil Pollution in Coastal Ecosystems: A Review</strong> <span class="pub-status submitted">Under Review</span><br>
                     Submitted to <em>Earth-Science Reviews</em>.</li>
-                    <li><strong>Coupling index of heavy metal immobilization and carbon sequestration reveals superior long-term performance of high-dosage biochar over low-dosage biochar and straw amendment</strong> <span class="pub-status submitted">Submitted</span><br>
-                    Submitted to <em>Agriculture, Ecosystems and Environment</em>.</li>
+                    <li><strong>Nationwide Calibration of PurpleAir Temperature Sensors for Heat Exposure Research</strong> <span class="pub-status submitted">Under Review</span><br>
+                    Manuscript in preparation.</li>
                 </ul>
             </div>
         </div>
@@ -790,12 +863,12 @@
         <h2>Honors & Awards</h2>
         <div class="awards-list">
             <ul>
-                <li>First Prize Scholarship of Beijing Normal University- 2023 & 2024</li>
+                <li>First Prize Scholarship, Beijing Normal University - 2023 & 2024</li>
                 <li>First Prize of Undergraduate Incentive Scholarship - 2023 & 2024</li>
-                <li>Three Good Student Scholarship - 2023</li>
-                <li>Second Prize Competition Scholarship of Beijing Normal University - 2023</li>
-                <li>Third Prize in Physics Competition for College Students - 2023</li>
-                <li>Second Prize in the National College Student Municipal Environmental Innovation Practice Competition (Vice Team Leader) - 2023</li>
+                <li>Merit Student Award - 2023</li>
+                <li>Second Prize Competition Scholarship, Beijing Normal University - 2023</li>
+                <li>Third Prize, Physics Competition for College Students (National) - 2023</li>
+                <li>Second Prize, National Municipal Environmental Innovation Competition (Vice Leader) - 2023</li>
                 <li>"Innovation Research Report" Award - 2023 Inspiration Plan Social Research Project</li>
             </ul>
         </div>
@@ -817,11 +890,15 @@
                 <p class="institution">Hong Kong, China</p>
                 <p class="date">November 2023</p>
                 <ul>
-                    <li>Assisted Prof. Xin Tian in delivering a talk on the greenhouse effect, natural disasters, and emission reduction to local students.</li>
+                    <li>Assisted Prof. Xin Tian in delivering a talk on the greenhouse effect, natural disasters, extreme weather, and emission reduction at a local elementary school.</li>
                 </ul>
             </div>
         </div>
     </section>
+
+    <div style="text-align: center; padding: 2rem; color: #666; font-size: 0.9rem; background: var(--light-bg);">
+        <p>Last Updated: December 16, 2025</p>
+    </div>
     
     <footer>
         <p>&copy; 2025 Yunqian Zhang. All rights reserved.</p>
