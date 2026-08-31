@@ -33,3 +33,27 @@ const statsTimer = window.setInterval(() => {
 }, 150);
 
 window.setTimeout(() => window.clearInterval(statsTimer), 12000);
+
+const clickEmojis = ['🛰️', '🌎', '✨', '🌱', '🪈', '🎵', '🎬'];
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+let emojiIndex = 0;
+
+document.addEventListener('click', (event) => {
+  if (reduceMotion.matches || (!event.clientX && !event.clientY)) return;
+
+  const emoji = document.createElement('span');
+  emoji.className = 'click-emoji';
+  emoji.setAttribute('aria-hidden', 'true');
+  emoji.textContent = clickEmojis[emojiIndex];
+  emojiIndex = (emojiIndex + 1) % clickEmojis.length;
+
+  const drift = Math.round(Math.random() * 34 - 17);
+  const rotation = Math.round(Math.random() * 24 - 12);
+  emoji.style.left = `${event.clientX}px`;
+  emoji.style.top = `${event.clientY}px`;
+  emoji.style.setProperty('--emoji-drift', `${drift}px`);
+  emoji.style.setProperty('--emoji-rotation', `${rotation}deg`);
+
+  document.body.appendChild(emoji);
+  emoji.addEventListener('animationend', () => emoji.remove(), { once: true });
+});
