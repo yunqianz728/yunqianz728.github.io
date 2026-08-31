@@ -10,5 +10,6 @@ redirect_from:
 
 About me
 ======
-Hello, and welcome to my homepage! I am a second-year undergraduate student at the School of Environment, Beijing Normal University, majoring in Environmental Science. My academic interests lie at the intersection of climate policy, economics, and environmental chemistry. Since the summer of 2023, I have been conducting research on CO2 emissions in the development of the digital economy, under the supervision of Prof. Xin Tian at Beijing Normal University. Additionally, I am honored to receive guidance from Prof. Ke Sun at BNU for my research on soil contamination.
+Hello, and welcome to my homepage! I am a PhD student in Social and Engineering Systems at the MIT Institute for Data, Systems, and Society (IDSS), advised by Prof. Daniel Varon. I am interested in using satellite observations, atmospheric inverse modeling, and machine learning to better understand greenhouse-gas emissions.
 
+Before beginning my PhD, I conducted research at MIT, UC Berkeley, Harvard Kennedy School, Stony Brook University, and Beijing Normal University across Earth observation, environmental sensing, atmospheric and geospatial modeling, environmental policy, and soil biogeochemistry.

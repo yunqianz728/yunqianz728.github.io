@@ -7,10 +7,10 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Yunqian's Home"
+title                    : "Yunqian Zhang | MIT IDSS PhD Student"
 title_separator          : "-"
-name                     : &name "Yunqian Zhan 张云茜"
-description              : &description "personal description"
+name                     : &name "Yunqian Zhang 张云茜"
+description              : &description "MIT IDSS PhD student studying satellite observations, methane emissions, atmospheric inverse modeling, and machine learning for Earth observation."
 url                      : https://yunqianz728.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "yunqianz728/yunqianz728.github.io"
@@ -82,12 +82,12 @@ analytics:
 author:
   name             : "Yunqian Zhang"
   avatar           : "profile.png"
-  bio              : "Undergraduate student at School of Environment, Beijing Normal University"
-  location         : "Beijing"
-  employer         :
+  bio              : "PhD student in Social and Engineering Systems at MIT IDSS"
+  location         : "Cambridge, Massachusetts"
+  employer         : "Massachusetts Institute of Technology"
   pubmed           : 
-  googlescholar    : "https://scholar.google.com/citations?user=MzaedpYAAAAJ"
-  email            : "yunqianz@mail.bnu.edu.cn"
+  googlescholar    : "https://scholar.google.com/citations?user=UH2QBPgAAAAJ"
+  email            : "yunqianz@mit.edu"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -96,7 +96,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : 
+  github           : "yunqianz728"
   google_plus      :
   keybase          :
   instagram        :
