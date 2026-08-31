@@ -1,1011 +1,163 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Yunqian Zhang - Environmental Science Undergraduate Student at Beijing Normal University, UC Berkeley, and MIT. Specializing in climate change, remote sensing, and environmental engineering.">
-    <meta name="keywords" content="Yunqian Zhang, 张云茜, Environmental Science, Climate Research, Beijing Normal University, UC Berkeley, MIT, Remote Sensing, Environmental Engineering, Ocean Science, Environmental Economics">
-    <meta name="author" content="Yunqian Zhang">
-    <meta property="og:title" content="Yunqian Zhang - Environmental Science Undergraduate Student">
-    <meta property="og:description" content="Personal website of Yunqian Zhang, Environmental Science Undergraduate Student with experience at BNU, UC Berkeley, and MIT">
-    <meta property="og:url" content="https://yunqianz728.github.io/">
-    <meta property="og:type" content="website">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://yunqianz728.github.io/">
-    <title>Yunqian Zhang - Environmental Science Undergraduate Student | 张云茜</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #27ae60;
-            --accent-color: #3498db;
-            --text-color: #333;
-            --light-bg: #f8f9fa;
-            --white: #ffffff;
-            --shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--light-bg);
-        }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: var(--white);
-            box-shadow: var(--shadow);
-            z-index: 1000;
-            transition: all 0.3s ease;
-        }
-
-        .nav-brand {
-            position: absolute;
-            left: 1rem;
-            top: 50%;
-            transform: translateY(-50%);
-            display: none;
-        }
-        
-        .nav-brand a {
-            text-decoration: none;
-            color: var(--primary-color);
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            padding: 1rem;
-            flex-wrap: wrap;
-        }
-
-        nav ul li {
-            margin: 0 1.5rem;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: var(--primary-color);
-            font-weight: 500;
-            transition: color 0.3s ease;
-            font-size: 0.95rem;
-        }
-
-        nav ul li a:hover {
-            color: var(--accent-color);
-        }
-
-        /* Mobile Navigation Toggle */
-        .nav-toggle {
-            display: none;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 0.5rem;
-            position: absolute;
-            right: 1rem;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        .nav-toggle span {
-            display: block;
-            width: 25px;
-            height: 3px;
-            background: var(--primary-color);
-            margin: 5px 0;
-            transition: all 0.3s ease;
-        }
-
-        .nav-toggle.active span:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
-        }
-
-        .nav-toggle.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .nav-toggle.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(7px, -6px);
-        }
-
-        @media (max-width: 768px) {
-            .nav-brand {
-                display: block;
-            }
-        }
-
-        /* Header/Hero Section */
-        header {
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            color: var(--white);
-            padding: 8rem 2rem 4rem;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        @media (max-width: 768px) {
-            header {
-                padding: 6rem 2rem 3rem;
-            }
-        }
-
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path fill="%23ffffff20" d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path></svg>') no-repeat bottom;
-            background-size: cover;
-            opacity: 0.3;
-        }
-
-        .profile-photo {
-            width: 180px;
-            height: 180px;
-            margin: 0 auto 2rem;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 5px solid rgba(255, 255, 255, 0.9);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
-            animation: fadeInDown 0.8s ease;
-            transition: transform 0.3s ease;
-            position: relative;
-        }
-
-        .profile-photo:hover {
-            transform: scale(1.05);
-        }
-
-        .profile-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .profile-photo:hover img {
-            transform: scale(1.1);
-        }
-
-        header h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            position: relative;
-            animation: fadeInDown 1s ease;
-        }
-
-        header p {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-            position: relative;
-            animation: fadeInUp 1s ease 0.3s backwards;
-        }
-
-        .contact-info {
-            margin-top: 1.5rem;
-            position: relative;
-            animation: fadeInUp 1s ease 0.6s backwards;
-        }
-
-        .contact-info a {
-            color: var(--white);
-            text-decoration: none;
-            margin: 0 1rem;
-            transition: opacity 0.3s ease;
-        }
-
-        .contact-info a:hover {
-            opacity: 0.8;
-        }
-
-        /* Section Styles */
-        section {
-            padding: 4rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            animation: fadeIn 1s ease;
-        }
-
-        section h2 {
-            color: var(--primary-color);
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            text-align: center;
-            position: relative;
-            padding-bottom: 1rem;
-        }
-
-        section h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background: var(--secondary-color);
-        }
-        
-        /* --- Image Grid Styles Start --- */
-        .image-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr); /* 创建一个2列的网格 */
-            gap: 15px; /* 图片之间的间距 */
-            max-width: 800px; /* 整个网格的最大宽度 */
-            margin: 1.5rem auto 0; /* 顶部外边距和水平居中 */
-        }
-
-        .image-grid img {
-            width: 100%; /* 图片宽度填满格子 */
-            height: auto; /* 高度自动，保持比例 */
-            aspect-ratio: 4 / 3; /* 可选：让所有图片保持4:3的比例 */
-            object-fit: cover; /* 裁剪图片以填充格子，不变形 */
-            border-radius: 8px; /* 圆角 */
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .image-grid img:hover {
-            transform: scale(1.03);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-        }
-        /* --- Image Grid Styles End --- */
-
-        /* Education Cards */
-        .education-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .education-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .education-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
-        }
-
-        .education-card h3 {
-            color: var(--accent-color);
-            margin-bottom: 0.5rem;
-        }
-
-        .education-card .date {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-
-        /* Research & News Projects */
-        .research-container, .news-container {
-            display: grid;
-            gap: 2rem;
-        }
-        
-        .research-item, .news-item {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
-            border-left: 4px solid var(--secondary-color);
-            transition: all 0.3s ease;
-        }
-
-        .research-item:hover, .news-item:hover {
-            transform: translateX(5px);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
-        }
-
-        .research-item h3, .news-item h3 {
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-        }
-        
-        .research-item .institution, .news-item .institution {
-            color: var(--accent-color);
-            font-weight: 500;
-            margin-bottom: 0.5rem;
-        }
-
-        .research-item .date, .news-item .date {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-
-        .research-item ul {
-            list-style-position: inside;
-            margin-left: 1rem;
-        }
-
-        .research-item ul li {
-            margin-bottom: 0.5rem;
-            line-height: 1.8;
-        }
-
-        /* Publication status badge */
-        .pub-status {
-            display: inline-block;
-            padding: 0.2rem 0.6rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: 500;
-            margin-left: 0.5rem;
-        }
-
-        .pub-status.published {
-            background-color: #d4edda;
-            color: #155724;
-        }
-
-        .pub-status.submitted {
-            background-color: #fff3cd;
-            color: #856404;
-        }
-        
-        .pub-status.released {
-             background-color: #cce5ff;
-             color: #004085;
-        }
-
-        /* Skills Section */
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .skill-category {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
-            transition: transform 0.3s ease;
-        }
-
-        .skill-category:hover {
-            transform: translateY(-5px);
-        }
-
-        .skill-category h3 {
-            color: var(--accent-color);
-            margin-bottom: 1rem;
-        }
-
-        .skill-category p {
-            line-height: 1.8;
-        }
-
-        /* Awards Section */
-        .awards-list {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
-        }
-
-        .awards-list ul {
-            list-style: none;
-        }
-
-        .awards-list li {
-            padding: 0.8rem 0;
-            border-bottom: 1px solid #eee;
-            position: relative;
-            padding-left: 2rem;
-        }
-
-        .awards-list li:last-child {
-            border-bottom: none;
-        }
-
-        .awards-list li::before {
-            content: '🏆';
-            position: absolute;
-            left: 0;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--primary-color);
-            color: var(--white);
-            text-align: center;
-            padding: 2rem;
-            margin-top: 4rem;
-        }
-
-        /* Visitor Statistics Section */
-        .visitor-stats {
-            background: var(--white);
-            padding: 2rem 0;
-            text-align: center;
-            color: var(--text-color);
-            font-size: 14px;
-            box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
-        }
-
-        .visitor-stats span {
-            margin: 0 15px;
-            display: inline-block;
-        }
-
-        .visitor-stats .stat-number {
-            color: var(--accent-color);
-            font-weight: bold;
-            font-size: 18px;
-            margin: 0 5px;
-        }
-
-        @media (max-width: 600px) {
-            .visitor-stats span {
-                display: block;
-                margin: 10px 0;
-            }
-            .image-grid {
-                grid-template-columns: 1fr; /* 在手机上，让图片变成单列显示 */
-            }
-        }
-
-        /* Animations */
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-            
-            header p {
-                font-size: 1.1rem;
-            }
-            
-            /* Mobile Navigation */
-            nav {
-                padding: 0.8rem 1rem;
-            }
-            
-            .nav-toggle {
-                display: block;
-            }
-            
-            nav ul {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: var(--white);
-                flex-direction: column;
-                align-items: center;
-                padding: 0;
-                max-height: 0;
-                overflow: hidden;
-                transition: max-height 0.4s ease;
-                box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            }
-            
-            nav.active ul {
-                max-height: 500px; /* Increased max-height for more items */
-                padding: 1rem 0;
-            }
-            
-            nav ul li {
-                margin: 0.8rem 0;
-                opacity: 0;
-                transform: translateY(-10px);
-                transition: all 0.3s ease;
-            }
-            
-            nav.active ul li {
-                opacity: 1;
-                transform: translateY(0);
-            }
-            
-            section {
-                padding: 3rem 1rem;
-            }
-            
-            section h2 {
-                font-size: 2rem;
-            }
-        }
-
-        /* Smooth Scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Add some visual interest with subtle patterns */
-        .pattern-bg {
-            background-color: #ffffff;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-opacity='0.03'%3E%3Cpolygon fill='%23000' points='50 0 60 40 100 50 60 60 50 100 40 60 0 50 40 40'/%3E%3C/g%3E%3C/svg%3E");
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Yunqian Zhang is a PhD student in Social and Engineering Systems at MIT IDSS, working on satellite observations, methane emissions, and atmospheric inverse modeling.">
+  <meta name="author" content="Yunqian Zhang">
+  <meta name="theme-color" content="#fbfbfa">
+  <meta property="og:title" content="Yunqian Zhang | MIT IDSS">
+  <meta property="og:description" content="PhD student working on satellite observations, methane emissions, and atmospheric inverse modeling.">
+  <meta property="og:url" content="https://yunqianz728.github.io/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://yunqianz728.github.io/">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <title>Yunqian Zhang | MIT IDSS</title>
 </head>
 <body>
-    <nav>
-        <div class="nav-brand">
-             <a href="#home">Yunqian Zhang</a>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <div class="brand-lockup">
+        <a class="site-name" href="#top">Yunqian Zhang</a>
+        <a class="institute-tag" href="https://idss.mit.edu/" target="_blank" rel="noopener">MIT IDSS</a>
+      </div>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#education">Education</a>
+        <a href="#news">News</a>
+        <a href="#outside">Outside</a>
+        <a href="files/yunqian-zhang-cv-2026-08-31-v5.pdf">CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="intro" aria-labelledby="intro-title">
+      <div class="intro-copy">
+        <p class="program-label"><span class="data-mark" aria-hidden="true"><i></i><i></i><i></i></span> MIT Institute for Data, Systems, and Society</p>
+        <h1 id="intro-title">Yunqian Zhang <span lang="zh-Hans">张云茜</span></h1>
+        <p class="role">PhD student in Social and Engineering Systems</p>
+        <p>I am a first-year PhD student at MIT IDSS, fortunate to be advised by <a href="https://eaps.mit.edu/people/daniel-varon/" target="_blank" rel="noopener">Prof. Daniel Varon</a>. I am interested in using satellite observations and quantitative models to better understand greenhouse-gas emissions.</p>
+        <p>Before beginning my PhD, I had the opportunity to work with <a href="https://eaps.mit.edu/people/faculty/" target="_blank" rel="noopener">Prof. Edward Boyle</a> at MIT, <a href="https://ced.berkeley.edu/people/lu-liang" target="_blank" rel="noopener">Prof. Lu Liang</a> at UC Berkeley, and <a href="https://www.hks.harvard.edu/faculty/charles-taylor" target="_blank" rel="noopener">Prof. Charles Taylor</a> at Harvard Kennedy School. At Beijing Normal University, I worked with Prof. Xin Tian on environmental systems modeling and with Prof. Ke Sun on soil carbon and biogeochemistry.</p>
+        <p class="profile-links">
+          <a href="mailto:yunqianz@mit.edu">Email</a>
+          <a href="files/yunqian-zhang-cv-2026-08-31-v5.pdf">CV</a>
+          <a href="https://scholar.google.com/citations?user=UH2QBPgAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+          <a href="https://github.com/yunqianz728" target="_blank" rel="noopener">GitHub</a>
+        </p>
+      </div>
+      <figure class="portrait">
+        <img src="profile-building.jpg" alt="Yunqian Zhang at UC Berkeley" width="2926" height="3902">
+      </figure>
+    </section>
+
+    <section class="content-section" id="research" aria-labelledby="research-title">
+      <h2 id="research-title">Research</h2>
+      <div class="section-content">
+        <div class="current-research">
+          <h3>Current direction</h3>
+          <p>As I begin my PhD, I am exploring how satellite measurements and atmospheric models can be used to quantify methane emissions. I am especially interested in machine-learning methods that can make inversion systems faster and more scalable while retaining physically meaningful estimates and uncertainty.</p>
+          <p class="topics"><span>Topics</span> methane remote sensing · inverse methods · machine learning · Earth observation</p>
         </div>
-        <button class="nav-toggle" onclick="toggleNav()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <ul>
-            <li><a href="#home" onclick="closeNav()">Home</a></li>
-            <li><a href="#education" onclick="closeNav()">Education</a></li>
-            <li><a href="#research" onclick="closeNav()">Research</a></li>
-            <li><a href="#publications" onclick="closeNav()">Publications</a></li>
-            <li><a href="#news" onclick="closeNav()">News</a></li>
-            <li><a href="#skills" onclick="closeNav()">Skills</a></li>
-            <li><a href="#awards" onclick="closeNav()">Awards</a></li>
-            <li><a href="#meetings" onclick="closeNav()">Meetings</a></li>
+
+        <h3 class="subheading">Selected previous work</h3>
+        <div class="project-list">
+          <article class="project project-featured">
+            <a class="project-image" href="https://doi.org/10.2139/ssrn.6570029" target="_blank" rel="noopener">
+              <img src="596318308896153bb8ac0fdb4a08c55c.jpg" alt="Yunqian Zhang presenting a PurpleAir temperature calibration poster at NCAR" loading="lazy" width="4284" height="5712">
+            </a>
+            <div>
+              <p class="meta">Environmental sensing · 2026</p>
+              <h4><a href="https://doi.org/10.2139/ssrn.6570029" target="_blank" rel="noopener">Nationwide calibration of PurpleAir temperature sensors</a></h4>
+              <p>Using nearly 800,000 paired hourly observations, we developed a machine-learning calibration framework that reduced temperature error by more than 88%.</p>
+            </div>
+          </article>
+          <article class="project">
+            <div>
+              <p class="meta">Agriculture · remote sensing · causal inference</p>
+              <h4>Rice cultivation, agricultural policy, and methane emissions</h4>
+              <p>A county-level study combining policy data, phenology-based remote sensing, causal analysis, and atmospheric observations.</p>
+            </div>
+          </article>
+          <article class="project">
+            <div>
+              <p class="meta">Soil biogeochemistry · Published in <em>Biochar</em> · 2026</p>
+              <h4><a href="https://doi.org/10.1007/s42773-025-00553-0" target="_blank" rel="noopener">Fourteen-year field evidence on biochar, heavy metals, and soil carbon</a></h4>
+              <p>Using a long-term field experiment and 376 soil samples, we compared biochar and straw amendments and found strong co-benefits for heavy-metal immobilization and carbon sequestration.</p>
+            </div>
+          </article>
+        </div>
+
+        <p class="more-work"><strong>Other projects:</strong> LiDAR-augmented tree-crown segmentation with SAM 2; vegetation and dust dynamics; long-term photovoltaic planning in China; urban soil contaminants and environmental risk.</p>
+      </div>
+    </section>
+
+    <section class="content-section" id="publications" aria-labelledby="publications-title">
+      <h2 id="publications-title">Publications</h2>
+      <div class="section-content">
+        <p class="section-note">Selected work. See <a href="https://scholar.google.com/citations?user=UH2QBPgAAAAJ" target="_blank" rel="noopener">Google Scholar</a> for the current list.</p>
+        <ol class="publication-list">
+          <li><span class="year">2026</span><p><a href="https://doi.org/10.2139/ssrn.6570029" target="_blank" rel="noopener">Nationwide Evaluation and Calibration of PurpleAir Temperature Sensors for Urban Thermal Environment Research</a><br><strong>Yunqian Zhang</strong>, Yan Rong, and Lu Liang. <em>SSRN preprint</em>.</p></li>
+          <li><span class="year">2026</span><p><a href="https://doi.org/10.1007/s42773-025-00553-0" target="_blank" rel="noopener">Fourteen-year field evidence reveals superior co-benefits of biochar in immobilizing heavy metals and sequestering carbon</a><br>Mengmeng Ma, <strong>Yunqian Zhang</strong>, et al. <em>Biochar</em> 8, 51.</p></li>
+          <li><span class="year">2025</span><p><a href="https://doi.org/10.1016/j.infgeo.2025.100025" target="_blank" rel="noopener">LiDAR-Augmented Zero-Shot Tree Crown Segmentation Using SAM 2</a><br>Yun Zhu, et al., <strong>Yunqian Zhang</strong>, Ma Qian, and Lu Liang. <em>Information Geography</em>, 100025.</p></li>
+          <li><span class="year">2024</span><p><a href="https://doi.org/10.1016/j.envpol.2024.124064" target="_blank" rel="noopener">Spatial distribution, source identification, and potential risks of 14 bisphenol analogues in soil from different functional zones in Chengdu, China</a><br>Meng Liao, et al., <strong>Yunqian Zhang</strong>. <em>Environmental Pollution</em> 352, 124064.</p></li>
+          <li><span class="year">2024</span><p><a href="https://doi.org/10.1007/s44246-024-00170-9" target="_blank" rel="noopener">Polyethylene microplastics hamper aged biochar's potential in mitigating greenhouse gas emissions</a><br>Yi Chen, et al., <strong>Yunqian Zhang</strong>, et al. <em>Carbon Research</em> 4, 5.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="content-section" id="education" aria-labelledby="education-title">
+      <h2 id="education-title">Education</h2>
+      <div class="section-content rows">
+        <article class="row"><span>2026–present</span><div><h3>Massachusetts Institute of Technology</h3><p>PhD, Social and Engineering Systems · IDSS</p></div></article>
+        <article class="row"><span>2024–2025</span><div><h3>University of California, Berkeley</h3><p>Exchange student · Berkeley Global Access Program</p></div></article>
+        <article class="row"><span>2022–2026</span><div><h3>Beijing Normal University</h3><p>BSc, Environmental Science</p></div></article>
+      </div>
+    </section>
+
+    <section class="content-section" id="news" aria-labelledby="news-title">
+      <h2 id="news-title">News</h2>
+      <div class="section-content rows">
+        <article class="row"><span>Aug 2026</span><p>Started my PhD in Social and Engineering Systems at MIT IDSS.</p></article>
+        <article class="row"><span>Apr 2026</span><p>Our nationwide PurpleAir temperature calibration study was posted as an <a href="https://doi.org/10.2139/ssrn.6570029" target="_blank" rel="noopener">SSRN preprint</a>.</p></article>
+        <article class="row"><span>Feb 2026</span><p>Our 14-year field study on biochar and soil carbon was published in <a href="https://doi.org/10.1007/s42773-025-00553-0" target="_blank" rel="noopener"><em>Biochar</em></a>.</p></article>
+        <article class="row"><span>Jun 2025</span><p>Presented my PurpleAir sensor calibration research at the NSF NCAR symposium on extreme heat and heat risk.</p></article>
+      </div>
+    </section>
+
+    <section class="content-section outside" id="outside" aria-labelledby="outside-title">
+      <h2 id="outside-title">Outside research</h2>
+      <div class="section-content">
+        <p class="outside-intro">Away from papers and code, I play the flute, sing, and enjoy movies.</p>
+        <p class="outside-note">Music has stayed with me for years: I played flute in a school orchestra and received Best Instrumental Performance at the 2022 Beijing University Music Festival.</p>
+        <ul class="interest-list" aria-label="Personal interests">
+          <li><span aria-hidden="true">♪</span> Flute</li>
+          <li><span aria-hidden="true">♫</span> Singing</li>
+          <li><span aria-hidden="true">🎬</span> Movies</li>
         </ul>
-    </nav>
-
-    <header id="home">
-        <div class="profile-photo">
-            <img src="profile-building.jpg" alt="Yunqian Zhang" id="profileImage">
-        </div>
-        <h1>Yunqian Zhang</h1>
-        <p>Undergraduate Student in Environmental Science</p>
-        <p>Beijing Normal University | UC Berkeley | MIT</p>
-        <div class="contact-info">
-            <a href="mailto:yunqianz@mail.bnu.edu.cn">📧 yunqianz@mail.bnu.edu.cn</a>
-            </div>
-    </header>
-
-    <section id="education" class="pattern-bg">
-        <h2>Education</h2>
-        <div class="education-container">
-            <div class="education-card">
-                <h3>Beijing Normal University</h3>
-                <p class="date">09/2022 - 07/2026 (Expected)</p>
-                <p><strong>Bachelor of Science in Environmental Science</strong></p>
-                <p>School of Environment, Beijing, China</p>
-                <p>• GPA: 3.86/4.00</p>
-                <p>• TOEFL: 108 | IELTS: 7.5 | GRE: 325 (170Q, 155V)</p>
-            </div>
-            
-            <div class="education-card">
-                <h3>University of California, Berkeley</h3>
-                <p class="date">09/2024 - 05/2025</p>
-                <p><strong>Exchange Student</strong></p>
-                <p>Berkeley Global Access Program, Berkeley, CA, USA</p>
-                <p>• GPA: 4.0/4.0</p>
-            </div>
-            
-            <div class="education-card">
-                <h3>Massachusetts Institute of Technology</h3>
-                <p class="date">06/2024 - 08/2024 & 07/2025 - 09/2025</p>
-                <p><strong>Visiting Student</strong></p>
-                <p>Dept. of Earth, Atmospheric, and Planetary Sciences (EAPS)</p>
-                <p>Summer research in Prof. Edward A. Boyle's group</p>
-            </div>
-        </div>
+      </div>
     </section>
+  </main>
 
-    <section id="research">
-        <h2>Research Experience</h2>
-        <div class="research-container">
-            <div class="research-item">
-                <h3>Chromium Isotopes and Cr(VI) in Seawater: Implications for Ultramafic Weathering and CO₂ Variability</h3>
-                <p class="institution">Prof. Edward A. Boyle's Group, MIT EAPS</p>
-                <p class="date">06/2024 - 08/2024 & 07/2025 - 09/2025</p>
-                <ul>
-                    <li>Conducted MC-ICP-MS measurements of Cr concentrations and δ⁵³Cr isotopic compositions in seawater profiles from the tropical Pacific Ocean.</li>
-                    <li>Performed ion exchange purification, Cr(VI) precipitation with Mg(OH)₂, and sample preparation for high-precision isotope analysis.</li>
-                    <li>Compiled published data on Cr concentrations/isotopic compositions in rivers, oceans, and weathering systems to test Kent-Muttoni and Jagoutz hypotheses on long-term climate variability.</li>
-                    <li>Supported NSF proposal development by synthesizing evidence linking ultramafic weathering patterns to atmospheric CO₂ variability and paleoclimate reconstruction.</li>
-                </ul>
-            </div>
+  <footer class="site-footer">
+    <p>Yunqian Zhang · MIT IDSS · <a href="mailto:yunqianz@mit.edu">yunqianz@mit.edu</a></p>
+    <p class="visitor-stats" aria-label="Website statistics">
+      <span id="busuanzi_container_site_uv" hidden>👥 Visitors: <strong id="busuanzi_value_site_uv"></strong></span>
+      <span class="stats-separator" aria-hidden="true" hidden>|</span>
+      <span id="busuanzi_container_site_pv" hidden>👁️ Page Views: <strong id="busuanzi_value_site_pv"></strong></span>
+    </p>
+    <p class="update-note">Last updated: <time datetime="2026-08-31">August 31, 2026</time><br>© <span id="year">2026</span></p>
+  </footer>
 
-            <div class="research-item">
-                <h3>Remote Sensing Analysis of Policy-Driven Methane Emission Reduction in Rice Cultivation Systems</h3>
-                <p class="institution">Prof. Charles Taylor's Group, Harvard Kennedy School</p>
-                <p class="date">12/2024 - Present</p>
-                <ul>
-                    <li>Developed a web scraping pipeline to systematically collect policy approval data from Chinese provincial government websites, creating a novel county-level dataset on dryland rice seed policies (2008-2024).</li>
-                    <li>Engineered provincial phenological model in Google Earth Engine to distinguish rain-fed from irrigated rice using multi-parameter indicators (NDVI, LSWI, slope), calibrated against MIRCA-OS reference data.</li>
-                    <li>Conducted event study analysis using 39,045 county-year observations (2,432 treated, 363 controls) to evaluate causal impact of water-saving policies. Found policies achieved water conservation through technological improvements rather than production reduction (irrigated area: β=-4.09 km², p=0.92).</li>
-                    <li>Initiated TROPOMI/GOSAT atmospheric methane analysis to assess environmental outcomes of cultivation system transitions.</li>
-                </ul>
-            </div>
-
-            <div class="research-item">
-                <h3>LiDAR-Augmented Zero-Shot Tree Crown Segmentation Using SAM 2</h3>
-                <p class="institution">Prof. Lu Liang's Group, UC Berkeley CED</p>
-                <p class="date">08/2024 - 02/2025</p>
-                <ul>
-                    <li>Enhanced tree crown delineation by fusing SAM 2 with RGB and LiDAR data, combining bounding boxes and LiDAR point prompts with noise reduction via sampling.</li>
-                    <li>Demonstrated SAM 2's potential for efficient ITC segmentation in complex forests, with LiDAR significantly boosting precision and recall.</li>
-                    <li>Paper published in <em>Information Geography</em>. DOI: <a href="https://doi.org/10.1016/j.infgeo.2025.100025" target="_blank">10.1016/j.infgeo.2025.100025</a></li>
-                </ul>
-            </div>
-
-            <div class="research-item">
-                <h3>Local Climate Zone (LCZ) and Urban Morphology Analysis of U.S. Cities</h3>
-                <p class="institution">Prof. Lu Liang's Group, UC Berkeley CED</p>
-                <p class="date">08/2024 - Present</p>
-                <ul>
-                    <li>Developed a machine learning model for LCZ mapping using LiDAR and satellite imagery.</li>
-                    <li>Engineered a Python pipeline to process over 500,000+ Google Street View images from 20+ U.S. cities.</li>
-                    <li>Implemented deep learning to quantify urban canyon characteristics (SVF, vegetation, buildings).</li>
-                    <li>Validated SVF metrics from Street View with LiDAR data.</li>
-                    <li>Analyzed correlations between LCZ, urban morphology, and climate data (PM2.5, humidity, temp).</li>
-                </ul>
-            </div>
-
-            <div class="research-item">
-                <h3>Nationwide Evaluation and Calibration of PurpleAir Temperature Sensors for Urban Thermal Environment Research</h3>
-                <p class="institution">Prof. Lu Liang's Group, UC Berkeley CED</p>
-                <p class="date">05/2025 - Present</p>
-                <ul>
-                    <li>Developed machine learning calibration framework for 98 PurpleAir sensors across 31 U.S. states, integrating 797,744 hourly observations (943 days, 2022-2024) with ERA5 meteorological reanalysis through spatial-temporal matching and quality control.</li>
-                    <li>Engineered 63 features capturing sensor thermal dynamics: 32 temporal features (lagged variables, rolling statistics, cumulative radiation, thermal streak indicators) and 31 spatial/meteorological features; temporal features reduced error by 29% compared to spatial-only models.</li>
-                    <li>Implemented temperature-based stratification (cold/normal/hot regimes) achieving test-set MAE of 0.38-0.53°C and RMSE of 0.57-0.74°C, representing 32-51% improvement over unstratified national baseline; outperformed climate-zone stratification in data-sparse regions.</li>
-                    <li>Evaluated four gradient boosting frameworks (XGBoost, LightGBM, CatBoost, Random Forest) with Bayesian hyperparameter optimization; stratified XGBoost ensemble achieved R²=0.975 for nationwide deployment.</li>
-                    <li>Conducted SHAP interpretability analysis revealing sensor temperature history, solar radiation accumulation, and humidity dynamics as dominant error drivers, with distinct hierarchies across thermal regimes; findings enable hyperlocal monitoring for heat-health assessment and environmental justice applications.</li>
-                    <li>Authored research manuscript (under review) and presented poster at NSF NCAR Research Symposium: Human and Geographic Dimensions of Extreme Heat and Heat Risk.</li>
-                </ul>
-            </div>
-
-            <div class="research-item">
-                <h3>Global Dust Emission Dynamics Under Climate Change and Land Use Management: A Multi-satellite Analysis (2003-2020)</h3>
-                <p class="institution">Prof. Minghao Qiu's Group, School of Marine and Atmospheric Sciences and Program in Public Health, Stony Brook University</p>
-                <p class="date">05/2025 - Present</p>
-                <ul>
-                    <li>Resolved the "greening-dust paradox": naive correlation showed vegetation increase associated with MORE dust (+0.374), but causal analysis revealed strong protective effect after controlling for climate confounders (0.1 NDVI increase reduces AOD by 0.017-0.020 units, 25-30% of mean).</li>
-                    <li>Integrated 22 years of CAMS and MODIS satellite data (2003-2024) across 1,336 grid cells in northern China and Mongolia, implementing dual-method causal framework: Random Forest counterfactual analysis (R²=0.77) validated with panel regression.</li>
-                    <li>Conducted mediation analysis revealing 97% of vegetation's dust-reducing effect operates through direct physical mechanisms (canopy interception, surface stabilization) rather than indirect pathways, implying rapid policy benefits without decades of ecosystem development.</li>
-                    <li>Identified 35-fold spatial heterogeneity: barren lands show 3-6× stronger effects than grasslands/croplands; core dust regions exhibit 35× stronger effects than non-source areas, providing evidence for strategic targeting.</li>
-                    <li>Demonstrated policy implications: strategic allocation toward high-impact zones (barren lands in core dust regions) could increase aggregate dust reduction by 40-60% with the same $3-5 billion annual budget, offering cost-effective alternatives to current uniform policies.</li>
-                    <li>Validated causality through spatial placebo tests (p<0.001) and temporal stability analysis across 22 years (trend p=0.446), supporting external validity and policy persistence.</li>
-                </ul>
-            </div>
-            
-            <div class="research-item">
-                <h3>Chinese Think Tank Project: Digital Technology Industry's Role in Low Carbon Development - Key Strategies and Drivers</h3>
-                <p class="institution">Prof. Xin Tian's Group, School of Environment, Beijing Normal University</p>
-                <p class="date">08/2023 - 12/2023</p>
-                <ul>
-                    <li>Applied Leontief input-output model and Structural Path Analysis to quantify carbon emissions across China's digital technology supply chain.</li>
-                    <li>Evaluated ICT sector inter-dependencies using backward/forward linkage analysis and influence coefficients.</li>
-                    <li>Used Structural Path Analysis (SPA) to identify how various economic activities impact carbon emissions and employed Structural Decomposition Analysis (SDA) to break down emission intensity into distinct factors.</li>
-                    <li>Co-authored 47-page policy report published by China Mobile Corporation.</li>
-                </ul>
-            </div>
-
-            <div class="research-item">
-                <h3>Spatio-Temporal Optimization Modeling for National Photovoltaic Infrastructure Deployment</h3>
-                <p class="institution">Prof. Xin Tian's Group, School of Environment, Beijing Normal University</p>
-                <p class="date">06/2025 - Present</p>
-                <ul>
-                    <li>Developed multi-period dynamic optimization model for 50-year PV deployment strategy across China, minimizing life-cycle costs using operations research framework.</li>
-                    <li>Integrated GIS, meteorological, and economic data to quantify cost function (CAPEX, O&M, transmission, decommissioning, ecological opportunity costs).</li>
-                    <li>Employed CatBoost for data imputation and time-series forecasting of demand and cost reduction curves.</li>
-                </ul>
-            </div>
-
-            <div class="research-item">
-                <h3>Ecological surprises and bioremediation potential of oil pollution in coastal ecosystems: A review</h3>
-                <p class="institution">Prof. Junhong Bai's Group, School of Environment, Beijing Normal University</p>
-                <p class="date">05/2024 - 01/2025</p>
-                <ul>
-                    <li>Conducted comprehensive literature review of bioremediation methods (phytoremediation, microbial, nanotechnology) for petroleum contamination in mangroves, salt marshes, seagrasses.</li>
-                    <li>Highlighted advanced approaches including omics technologies, engineered microbes, and real-time monitoring systems while addressing challenges such as salinity, low oxygen conditions, and nutrient limitations.</li>
-                </ul>
-            </div>
-
-            <div class="research-item">
-                <h3>Spatial distribution, source identification, and potential risks of 14 bisphenol analogues in soil from different functional zones in Chengdu, China</h3>
-                <p class="institution">Prof. Zhi Li's Group, College of Architecture & Environment, Sichuan University</p>
-                <p class="date">02/2023 - 02/2024</p>
-                <ul>
-                    <li>Analyzed spatial distribution of 14 bisphenol compounds across functional zones in Chengdu using 376 dust samples.</li>
-                    <li>Applied normality, correlation, and Mann-Whitney U tests for statistical analysis.</li>
-                </ul>
-            </div>
-
-            <div class="research-item">
-                <h3>Polyethylene microplastics hamper aged biochar's potential in mitigating greenhouse gas emissions</h3>
-                <p class="institution">Prof. Ke Sun's Group, School of Environment, Beijing Normal University</p>
-                <p class="date">12/2023 - 01/2025</p>
-                <ul>
-                    <li>Investigated interactive effects of PE microplastics and decadal biochar on CO₂/N₂O emissions through incubation and field experiments.</li>
-                    <li>Revealed microplastics reduced biochar's mitigation effectiveness by 44-82% via altered soil structure and microbial activity.</li>
-                </ul>
-            </div>
-
-            <div class="research-item">
-                <h3>Fourteen-year field evidence reveals superior co-benefits of biochar in immobilizing heavy metals and sequestering carbon</h3>
-                <p class="institution">Prof. Ke Sun's Group, School of Environment, Beijing Normal University</p>
-                <p class="date">12/2024 - 02/2026</p>
-                <ul>
-                    <li>Analyzed 376 soil samples from a 14-year field experiment (2007-2021) to quantify long-term effects of biochar vs. straw amendments on heavy metal dynamics in agricultural soils.</li>
-                    <li>Performed comprehensive data analyses including DGT bioavailability measurements for 6 heavy metals (Cd, Pb, Ni, Co, Cu, Mo) and BCR sequential extraction for speciation analysis.</li>
-                    <li>Applied advanced statistical modeling (PLS-SEM, VPA) on over 40 soil physicochemical and microbial parameters to deconvolve regulatory pathways, identifying that microbial properties explained 30% of metal bioavailability variance while physicochemical factors governed 12% of speciation shifts.</li>
-                    <li>Co-developed a novel Carbon-Metal Coupling Index using entropy weight method, demonstrating high-dosage biochar achieved 0.703 coupling score (vs. 0.361 for low-dosage biochar and 0.396 for straw), representing 94% improvement in synergistic benefits.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="publications" class="pattern-bg">
-        <h2>Publications</h2>
-        <div class="research-container">
-            <div class="research-item">
-                <h3>Peer-Reviewed Publications</h3>
-                <ul>
-                    <li><strong>LiDAR-Augmented Zero-Shot Tree Crown Segmentation Using SAM 2</strong> <span class="pub-status published">Published</span><br>
-                    <em>Information Geography</em>, 2025. <a href="https://doi.org/10.1016/j.infgeo.2025.100025" target="_blank">DOI: 10.1016/j.infgeo.2025.100025</a></li>
-                    <li><strong>Spatial distribution, source identification, and potential risks of 14 bisphenol analogues in soil from different functional zones in Chengdu, China</strong> <span class="pub-status published">Published</span><br>
-                    <em>Environment Pollution</em>, 2024. <a href="https://doi.org/10.1016/j.envpol.2024.124064" target="_blank">DOI: 10.1016/j.envpol.2024.124064</a></li>
-                    <li><strong>Polyethylene microplastics hamper aged biochar's potential in mitigating greenhouse gas emissions</strong> <span class="pub-status published">Published</span><br>
-                    <em>Carbon Research</em>, 2024. <a href="https://doi.org/10.1007/s44246-024-00170-9" target="_blank">DOI: 10.1007/s44246-024-00170-9</a></li>
-                    <li><strong>Fourteen-year field evidence reveals superior co-benefits of biochar in immobilizing heavy metals and sequestering carbon</strong> <span class="pub-status published">Published</span><br>
-                    <em>Biochar</em>, 2026. <a href="https://link.springer.com/article/10.1007/s42773-025-00553-0" target="_blank">DOI: 10.1007/s42773-025-00553-0</a></li> 
-                </ul>
-            </div>
-             <div class="research-item">
-                <h3>Reports</h3>
-                 <ul>
-                    <li><strong>Chinese Think Tank Project: Digital Technology Industry's Role in Low Carbon Development</strong> <span class="pub-status released">Publicly Released</span><br>
-                    A 47-page report founded by China Mobile Corporation, 2023.</li>
-                </ul>
-            </div>
-            <div class="research-item">
-                <h3>Manuscripts Under Review</h3>
-                <ul>
-                    <li><strong>Ecological Surprises and Bioremediation Potential of Oil Pollution in Coastal Ecosystems: A Review</strong> <span class="pub-status submitted">Under Review</span><br>
-                    Submitted to <em>Earth-Science Reviews</em>.</li>
-                    <li><strong>Nationwide Evaluation and Calibration of PurpleAir Temperature Sensors for Urban Thermal Environment Research</strong> <span class="pub-status submitted">Under Review</span><br>
-                    Submitted to <em>Environmental Research</em>.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="news">
-        <h2>News & Highlights</h2>
-        <div class="news-container">
-            <div class="news-item">
-                <h3>Poster Presentation at NSF NCAR Research Symposium</h3>
-                <p class="institution">Boulder, CO, USA</p>
-                <p class="date">June 2025</p>
-                <p>I had the wonderful opportunity to present my research on "Nationwide Evaluation and Calibration of PurpleAir Temperature Sensors for Urban Thermal Environment Research" at the NSF NCAR Symposium. It was a great experience sharing my work and learning from others in the field of extreme heat research.</p>
-                
-                <div class="image-grid">
-                    <img src="6f4cfafa8a016a4e9aaa651554f225f6.jpg" alt="Conference photo 1">
-                    <img src="596318308896153bb8ac0fdb4a08c55c.jpg" alt="Conference photo 2">
-                    <img src="a5615263637c57e7d481e753724d3c71.jpg" alt="Conference photo 3">
-                    <img src="f5b80b8e7ba79176f56838bcd7b8a63a.jpg" alt="Conference photo 4">
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="skills" class="pattern-bg">
-        <h2>Skills & Languages</h2>
-        <div class="skills-container">
-            <div class="skill-category">
-                <h3>Programming & Software</h3>
-                <p><strong>Languages:</strong> Python, C/C++, Java</p>
-                <p><strong>Tools:</strong> R, MATLAB, Excel, ArcGIS (Pro), QGIS, Google Earth Engine (GEE)</p>
-            </div>
-            <div class="skill-category">
-                <h3>Languages</h3>
-                <p><strong>Chinese:</strong> Fluent</p>
-                <p><strong>English:</strong> Fluent (TOEFL: 108)</p>
-            </div>
-            <div class="skill-category">
-                <h3>Arts & Music</h3>
-                <p><strong>Flute & Singing:</strong> Played flute in the school orchestra, winning Best Instrumental Performance at the 2022 Beijing University Music Festival. Received awards in school singing contests.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="awards">
-        <h2>Honors & Awards</h2>
-        <div class="awards-list">
-            <ul>
-                <li>First Prize Scholarship, Beijing Normal University - 2023 & 2024</li>
-                <li>First Prize of Undergraduate Incentive Scholarship - 2023 & 2024</li>
-                <li>Merit Student Award - 2023</li>
-                <li>Second Prize Competition Scholarship, Beijing Normal University - 2023</li>
-                <li>Third Prize, Physics Competition for College Students (National) - 2023</li>
-                <li>Second Prize, National Municipal Environmental Innovation Competition (Vice Leader) - 2023</li>
-                <li>"Innovation Research Report" Award - 2023 Inspiration Plan Social Research Project</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="meetings" class="pattern-bg">
-        <h2>Talks & Meetings</h2>
-        <div class="research-container">
-            <div class="research-item">
-                <h3>NSF NCAR Research Symposium</h3>
-                <p class="institution">Boulder, CO, USA</p>
-                <p class="date">June 2025</p>
-                <ul>
-                    <li>Gave a poster presentation on "Nationwide Evaluation and Calibration of PurpleAir Temperature Sensors for Urban Thermal Environment Research" at the Human and Geographic Dimensions of Extreme Heat and Heat Risk symposium.</li>
-                </ul>
-            </div>
-            <div class="research-item">
-                <h3>Elementary School Outreach</h3>
-                <p class="institution">Hong Kong, China</p>
-                <p class="date">November 2023</p>
-                <ul>
-                    <li>Assisted Prof. Xin Tian in delivering a talk on the greenhouse effect, natural disasters, extreme weather, and emission reduction at a local elementary school.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <div style="text-align: center; padding: 2rem; color: #666; font-size: 0.9rem; background: var(--light-bg);">
-        <p>Last Updated: February 12, 2026</p>
-    </div>
-    
-    <footer>
-        <p>&copy; 2025 Yunqian Zhang. All rights reserved.</p>
-        <p>Environmental Science Undergraduate Student | Beijing Normal University</p>
-    </footer>
-
-    <div class="visitor-stats">
-        <span id="busuanzi_container_site_uv" style="display: none;">
-            👥 Visitors: <span id="busuanzi_value_site_uv" class="stat-number"></span>
-        </span>
-        <span style="margin: 0 20px; color: #ddd;">|</span>
-        <span id="busuanzi_container_site_pv" style="display: none;">
-            👁️ Page Views: <span id="busuanzi_value_site_pv" class="stat-number"></span>
-        </span>
-    </div>
-
-    <script>
-        // Mobile Navigation Toggle
-        function toggleNav() {
-            const nav = document.querySelector('nav');
-            const navToggle = document.querySelector('.nav-toggle');
-            nav.classList.toggle('active');
-            navToggle.classList.toggle('active');
-        }
-
-        function closeNav() {
-            const nav = document.querySelector('nav');
-            const navToggle = document.querySelector('.nav-toggle');
-            nav.classList.remove('active');
-            navToggle.classList.remove('active');
-        }
-
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', function(event) {
-            const nav = document.querySelector('nav');
-            const navToggle = document.querySelector('.nav-toggle');
-            if (!nav.contains(event.target) && nav.classList.contains('active')) {
-                closeNav();
-            }
-        });
-
-        // Smooth scroll behavior for navigation links
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const href = this.getAttribute('href');
-                if (href.startsWith('#')) {
-                    e.preventDefault();
-                    const target = document.querySelector(href);
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                        closeNav(); // Close nav after clicking a link
-                    }
-                }
-            });
-        });
-
-        // Add scroll effect to navigation
-        window.addEventListener('scroll', function() {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 100) {
-                nav.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
-                nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
-            } else {
-                nav.style.backgroundColor = '#ffffff';
-                nav.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
-            }
-        });
-
-        // Add fade-in animation to elements as they come into view
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries, observer) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        // Observe all relevant items
-        document.querySelectorAll('.research-item, .skill-category, .education-card, .news-item, .awards-list').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-            observer.observe(el);
-        });
-
-    </script>
-    
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <script>
-        // Wait for busuanzi to load before displaying stats
-        var checkBusuanzi = setInterval(function() {
-            if (document.getElementById('busuanzi_value_site_uv').innerText.trim() !== '' && document.getElementById('busuanzi_value_site_pv').innerText.trim() !== '') {
-                document.getElementById('busuanzi_container_site_uv').style.display = 'inline-block';
-                document.getElementById('busuanzi_container_site_pv').style.display = 'inline-block';
-                clearInterval(checkBusuanzi);
-            }
-        }, 100);
-    </script>
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script src="assets/js/site.js"></script>
 </body>
 </html>
