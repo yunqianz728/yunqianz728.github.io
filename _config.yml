@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Yunqian Zhang | MIT IDSS PhD Student"
 title_separator          : "-"
 name                     : &name "Yunqian Zhang 张云茜"
-description              : &description "MIT IDSS PhD student studying satellite observations, methane emissions, atmospheric inverse modeling, and machine learning for Earth observation."
+description              : &description "MIT IDSS PhD student using satellite observations, atmospheric models, and machine learning to study greenhouse-gas emissions, environmental change, and human well-being."
 url                      : https://yunqianz728.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "yunqianz728/yunqianz728.github.io"
@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Yunqian Zhang"
   avatar           : "profile.png"
-  bio              : "PhD student in Social and Engineering Systems at MIT IDSS"
+  bio              : "PhD student at MIT IDSS"
   location         : "Cambridge, Massachusetts"
   employer         : "Massachusetts Institute of Technology"
   pubmed           : 
